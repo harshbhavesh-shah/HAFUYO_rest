@@ -1,0 +1,142 @@
+
+*{
+    padding: 0;
+}
+
+body{
+    background-color: rgb(220, 195, 163);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 4em;
+    margin-top: 6em;
+}
+
+header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    padding:1em;
+    text-align: center;
+    background-color: rgb(88, 80, 69);
+    border-radius: 20px;
+}
+
+ul > li {
+    display: inline-block;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav a:hover {
+    color: rgb(206, 186, 160);
+}
+
+.banner > a,
+.banner > p {
+    display: inline-block;
+    padding: 2rem;
+    color: rgb(16, 16, 16);
+    font-weight: bold;
+}
+
+.banner{
+    background-image: url("pasta-3547078.jpg");
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+
+.banner:hover {
+    background-color: rgba(200, 175, 143, 0.5);
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    color: rgb(0, 0, 0);
+    font-size: 1.01em;
+}
+
+section{
+    display: flex;
+    gap: 1.8em;
+    margin-top: 1.5em;
+    align-content: stretch;
+}
+
+.grid a {
+    flex: 1 0;
+    
+}
+
+.grid article{
+    background-color: rgba(200, 175, 143);
+    border-radius: 20px;
+    padding: 1em;
+    padding-bottom: 1.5em;
+    color: rgb(16, 16, 16);
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+article img{
+    border-radius: 20px;
+    max-width: 100%;
+
+}
+
+
+.grid article:hover {
+    background-color: rgba(200, 175, 143, 0.5);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+}
+
+
+a h1 {
+    font-size: 3.5em;
+}
+
+h2{
+    font-size: 2.2em;
+}
+
+footer{
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 0;
+    border-top: 2px solid rgba(88, 80, 69, 0.8);
+    align-content: center;
+}
+
+footer >div {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+footer img {
+    margin-top: 1em;
+    max-width: 10%;
+    min-width: 4em;
+}
+
+footer p {
+    text-align: end;
+    font-size: 1.2em;
+}
+
