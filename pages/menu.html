@@ -21,31 +21,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     <link rel="manifest" href="../images/site.webmanifest">
 
-    <style>
-        footer{
-    display: flex;
-    margin-top: 5em;
-    margin-bottom: 0;
-    border-top: 2px solid rgba(88, 80, 69, 0.8);
-    align-content: center;
-}
-
-footer >div {
-    flex: 1;
-    margin-bottom: 0;
-}
-
-footer img {
-    margin-top: 1em;
-    max-width: 10%;
-    min-width: 4em;
-}
-
-footer p {
-    text-align: end;
-    font-size: 1.2em;
-}
-    </style>
 </head>
 <body>
   <header>
@@ -153,24 +128,99 @@ footer p {
         </section>
 
         <section class="grid">
+            
             <h2>Drinks</h2>
-
-
+            
+            <a href="this link leads nowhere but it could">
+                <article class="article1">
+                    <h3>Drink 1</h3>
+                    <img src="meat-6507228_1280.jpg" alt="one of our new dishes">
+                    <p>Freshly crafted different Italian, Greek or Turkish dishes for you to enjoy, incorporating traditional with a modern twist</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article2">
+                    <h3>Drink 2</h3>
+                    <img  src="menu-pexels-roman-odintsov-4551832.jpg" alt="reference image of our menu">
+                    <p >Take a look at our full drinks and food menu and get a taste of your order even before you get here</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article3">
+                    <h3>Drink 3</h3>
+                    <img src="apples-1873078_1280.jpg" alt="fruits growing on a tree">
+                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article3">
+                    <h3>Drink 4</h3>
+                    <img src="apples-1873078_1280.jpg" alt="fruits growing on a tree">
+                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
+                </article>
+            </a>
         </section>
         <section class="grid">
+            
             <h2>Desserts</h2>
-
-
+            
+            <a href="this link leads nowhere but it could">
+                <article class="article1">
+                    <h3>Desserts 1</h3>
+                    <img src="meat-6507228_1280.jpg" alt="one of our new dishes">
+                    <p>Freshly crafted different Italian, Greek or Turkish dishes for you to enjoy, incorporating traditional with a modern twist</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article2">
+                    <h3>Desserts 2</h3>
+                    <img  src="menu-pexels-roman-odintsov-4551832.jpg" alt="reference image of our menu">
+                    <p >Take a look at our full drinks and food menu and get a taste of your order even before you get here</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article3">
+                    <h3>Desserts 3</h3>
+                    <img src="apples-1873078_1280.jpg" alt="fruits growing on a tree">
+                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
+                </article>
+            </a>
+            <a href="this link leads nowhere but it could">
+                <article class="article3">
+                    <h3>Desserts 4</h3>
+                    <img src="apples-1873078_1280.jpg" alt="fruits growing on a tree">
+                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
+                </article>
+            </a>
         </section>
 
     </main>
 
     <footer>
-         <!--FOOTER.... we add 
-            contact information info and links
-        social media ... we put icons here and links-->
-
-        <div> <!--Review if these tags semantically are correct and modify content -->
+    
+    <nav aria-label="Footer navigation">
+        <a href="../index.html" class="home-link">
+            <img src="../images/logo.webp" 
+                 alt="" 
+                 role="presentation"
+                 width="40" 
+                 height="40"
+                 loading="lazy"
+                 decoding="async">
+            <span>Go back to home page</span>
+        </a>
+    </nav>
+        <ul>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-contenu">
+            <div class="section">
+                <a>About Us</a>
+            </div>
+        </div>
             <h3>Contact Information</h3>
             <p>
                 Address: Aix-en-Provence...  <br>
@@ -178,27 +228,23 @@ footer p {
                 Email: .....@.....com
             </p>
         </div>
-        <div> <!--Review if these tags are semantically correct and modify content -->
-            <ul>
-                <li><a href="link to our Fb page...">Facebook</a></li>
-                <!--Add the icon here... needed inside the same li element or separed one to use grid or flexbox formating later???-->
-                <li><a href="add link to our Ig page here...">Instagram</a></li>
-                <!--Add the icon here...-->
-                <li><a href="link to our other social media">Tiktok...</a></li>
-                <!--Add the icon here...-->
+        <div> 
+            <ul class="footer-socials">
+                <li>
+                  <a href="https://github.com/mdn/" target="_blank" rel="noopener" aria-label="Hafuyo on GitHub" data-icon="github"></a>
+                </li>
+                <li>
+                  <a href="https://bsky.app/profile/developer.mozilla.org" target="_blank" rel="noopener" aria-label="Hafuyo on Facebook" data-icon="facebook"></a>
+                </li>
+                <li>
+                  <a href="https://x.com/mozdevnet" target="_blank" rel="noopener" aria-label="Hafuyo on X" data-icon="x"></a>
+                </li>
+                <li>
+                  <a href="https://mastodon.social/@mdn" target="_blank" rel="noopener" aria-label="Hafuyo on Instagram" data-icon="instagram"></a>
+                </li>
+                <li><p>A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p></li>
             </ul>
         </div>
-        <div>
-            <img src="../images/logo.webp" alt="Hafuyo logo">
-        </div>
-        
-        <div class="footer-contenu">
-            <div class="section">
-                <h4>About Us</h4>
-                <p>A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
-            </div>
-        </div>
-
         <div class="copyright">
             <p>&copy; 2025<br>
                 Hafuyo<br>
@@ -206,10 +252,11 @@ footer p {
             </p>
             <button id="backToTop" class="back-to-top">↑ Back to top</button>
         </div>
-
     </footer>
 
     <script src="../js/menu.js"></script>
 
 </body>
 </html>
+
+
