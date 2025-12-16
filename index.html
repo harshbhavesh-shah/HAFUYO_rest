@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Hafuyo | Restaurant international gastronomique</title>
@@ -14,19 +14,19 @@ française, dans un délicieux mélange ouvert à tous.">
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Primary icons, older browser compatibility, and different sizes--UPLOAD files and match names and formats!! -->
+    <!-- Primary icons, older browser compatibility, and different sizes - UPLOAD files and match names and formats!! -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" sizes="any" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest"> <!-- needed??-->
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <header>
         <a href="index.html">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&h=100&fit=crop" alt="Hafuyo logo">
+            <img src="images/logo.webp" alt="Hafuyo logo">
         </a>
         <nav>
             <ul>
@@ -55,6 +55,7 @@ française, dans un délicieux mélange ouvert à tous.">
 
         <!-- Banner Promotion -->
         <section class="banner-section">
+            <h2>DISCOVER</h2>
             <article class="banner">
                 <a href="pages/offer.html">
                     <div class="banner-image">
@@ -70,73 +71,65 @@ française, dans un délicieux mélange ouvert à tous.">
 
         <!-- Grid Cards -->
         <section class="grid">
+            <h2>NEW DISHES AND MENU</h2>
             <a href="pages/new-dishes.html">
                 <article>
-                    <h2>Discover our newly added dishes!</h2>
+                    <h3>Discover our newly added dishes!</h3>
                     <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="One of our new dishes">
                     <p>Freshly crafted Italian, Greek and Turkish dishes for you to enjoy, incorporating traditional flavors with a modern twist</p>
                 </article>
             </a>
             <a href="pages/menu.html">
                 <article>
-                    <h2>Our Complete Menu</h2>
+                    <h3>Our Complete Menu</h3>
                     <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600" alt="Reference image of our menu">
                     <p>Take a look at our full drinks and food menu and get a taste of your order even before you get here</p>
                 </article>
             </a>
             <a href="pages/ingredients.html">
                 <article>
-                    <h2>Where our ingredients come from</h2>
+                    <h3>Where our ingredients come from</h3>
                     <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600" alt="Fresh local ingredients">
                     <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
                 </article>
             </a>
         </section>
-        
-        <!--Added by yotzan, you can take a look, also  not definitive code... -->
-        <section>
-            <h3>
-                Discover one of our iconic recipes
-            </h3>
-            <figure>
-                <video lang="es" controls preload="metadata" width="720"
-                    poster="images/video-poster.jpg" aria-describedby="video-desc">
-                    <!--remind me to upload an actual poster image for our video... -->
-
-                    <source src="video_hafuyo_tacos.mp4" type="video/mp4">
-                    
-                    <track kind="captions" srclang="es" src="captions_SPA.vtt" label="Español" default>
-                    <track kind="subtitles" srclang="en" src="subtitles_EN.vtt" label="English">
-                    <track kind="subtitles" srclang="fr" src="subtitles_FR.vtt" label="Français">
-
-                    Your browser does not support the video tag.
-                    <p>
-                        Your browser does not support this video html tag. Here you can
-                        <a href="video_hafuyo_tacos.mp4" download>download the video (MP4)</a> instead.
-                    </p>
-                    <!-- Here you can donwload the video or "Here is a link to the video"?? depends on what we want... see -->
-
-                </video>
-
-             <!-- description for SEO & screen readers -->
-                <figcaption id="video-desc">
-                Traditional Mexican tacos al pastor recipe explained step by step.
-                Subtitles available in English and French. 
-                    Note: this chef is not actually part of our team it is just a 
-                    representation of the kind of food we hypothetically serve.
-                </figcaption>
-            </figure>
-    
-            </section>
-        
     </main>
 
     <footer>
         <div>
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&h=100&fit=crop" alt="Hafuyo logo">
+            <img src="images/logo.webp" alt="Hafuyo logo">
         </div>
-        <div>
-            <p>&copy; 2024 Hafuyo Restaurant - Aix-en-Provence | All rights reserved</p>
+
+        <div class="footer-contenu">
+            <div class="section">
+                <h3>About Us</h3>
+                <p>A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
+            </div>
+            
+            <div class="section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/menu.html">Menu</a></li>
+                    <li><a href="pages/reservations.html">Reservations</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025<br>
+                Hafuyo<br>
+                All rights reserved
+            </p>
         </div>
     </footer>
 </body>
