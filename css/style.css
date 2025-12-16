@@ -5,10 +5,8 @@
 }
 
 body {
-    background-color: rgb(220, 195, 163);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    padding-top: 90px;
 }
 
 /* ========== HEADER ========== */
@@ -21,23 +19,67 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #fff;
+    border-bottom: 2px solid rgba(88, 80, 69, 0.8);
+    background-color: rgba(200, 175, 143, 0.3);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 header a img {
-    height: 90px;
+    height: 60px;
     width: auto;
     outline: 1px solid transparent;
     outline-offset: 10px;
     transition: all 0.5s;
-    border-radius: 5%; 
+    border-radius: 20%;
 }
 
 header a img:hover {
     outline-color: black;
-    outline-offset: 15px; 
+    outline-offset: 15px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 nav ul {
@@ -50,11 +92,20 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: red;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    color: #999;
+    margin-left: 2rem;
+    pointer-events: none;
+    font-size: 1.5rem;
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -64,7 +115,7 @@ main {
     padding: 2rem;
 }
 
-/* ========== SECTION TITLES ========== */
+/* ========== TITLES SECTION ========== */
 section > h2 {
     font-size: 2.5rem;
     color: rgb(16, 16, 16);
@@ -102,11 +153,12 @@ section > h2 {
 }
 
 .hero p {
-    line-height: 1.8;
     color: rgb(40, 40, 40);
-    max-width: 900px;
+    max-width: 100%; 
     margin: 0 auto;
     text-align: justify;
+    font-size: 1.5rem;
+    line-height: 2;
 }
 
 /* ========== BANNER SECTION ========== */
@@ -119,6 +171,7 @@ section > h2 {
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #000;
 }
 
 .banner:hover {
@@ -151,7 +204,7 @@ section > h2 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.banner-text h2 {
+.banner-text h3 {
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 3px;
@@ -163,8 +216,7 @@ section > h2 {
     text-align: center;
     padding: 2rem;
     color: rgb(16, 16, 16);
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     background-color: rgba(200, 175, 143, 0.3);
     border-radius: 0 0 20px 20px;
 }
@@ -200,6 +252,7 @@ section > h2 {
     padding: 1.5rem;
     height: 100%;
     transition: all 0.3s ease;
+    border: 3px solid #000;
 }
 
 .grid article:hover {
@@ -226,6 +279,7 @@ section > h2 {
     color: rgb(30, 30, 30);
     line-height: 1.6;
     font-weight: normal;
+    font-size: 1.4rem;
 }
 
 /* ========== FOOTER ========== */
@@ -311,32 +365,91 @@ footer img {
     color: rgb(40, 40, 40);
 }
 
+.back-to-top {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(200, 175, 143, 0.8);
+    color: rgb(16, 16, 16);
+    border: 2px solid rgb(88, 80, 69);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.back-to-top:hover {
+    background-color: rgba(200, 175, 143, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+}
+
 /* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 80px;
     }
 
-    header {
-        padding: 1rem;
+    /* Header responsive */
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul li:not(:last-child)::after {
+        content: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        padding-top: 80px;
+    }
+
+    nav.active {
+        right: 0;
     }
 
     nav ul {
-        gap: 1rem;
-        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
     }
 
     header a img {
-        height: 60px;
+        height: 50px;
     }
 
+    .site-title {
+        font-size: 1.2rem;
+    }
+
+    /* Main content */
     main {
         padding: 1.5rem;
     }
 
     section > h2 {
         font-size: 2rem;
-        text-align: center;
     }
 
     .hero h1 {
@@ -349,6 +462,9 @@ footer img {
 
     .banner-text h2 {
         font-size: 1.8rem;
+    }
+
+    .banner-text {
         padding: 1.5rem 2rem;
     }
 
@@ -360,6 +476,7 @@ footer img {
         font-size: 1.5rem;
     }
 
+    /* Footer */
     footer {
         flex-direction: column;
         align-items: center;
@@ -387,7 +504,6 @@ footer img {
     }
 
     .section a:hover {
-        transform: translateX(0);
         transform: scale(1.05);
     }
 
@@ -396,30 +512,26 @@ footer img {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     body {
-        padding-top: 160px;
+        padding-top: 70px;
     }
 
     header {
-        flex-direction: column;
-        gap: 1rem;
+        padding: 0.8rem 1rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
+    .site-title {
+        font-size: 1rem;
     }
 
     header a img {
-        height: 50px;
+        height: 40px;
     }
 
     section > h2 {
         font-size: 1.6rem;
         letter-spacing: 1px;
-        text-align: center; 
     }
 
     .hero h1 {
