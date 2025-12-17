@@ -267,10 +267,18 @@ section > h2 {
     margin-bottom: 1rem;
 }
 
-.grid article img, video {
+.grid article img {
     border-radius: 15px;
     width: 100%;
     height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.grid article video {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 0.5em;
     object-fit: cover;
     margin-bottom: 1rem;
 }
