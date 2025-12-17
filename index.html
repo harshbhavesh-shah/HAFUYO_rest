@@ -141,7 +141,220 @@ française, dans un délicieux mélange ouvert à tous.">
             
             </section>
     </main>
+    
+<!--I updated the footer to be complete according to instructions, etc... I added styles for the footer here, but I will change it later to the css sheet
+    just so we can see how it would look... also not finished style yet...I still need to remove some stuff...-->
+<footer>
+    <div class="footer-container">
+      <!-- Brand & Home Link -->
+      <div class="footer-brand">
+        <a href="../index.html" class="home-link">
+          <img src="../images/logo.webp" 
+               alt="" 
+               role="presentation"
+               width="40" 
+               height="40"
+               loading="lazy"
+               decoding="async">
+          <span>Back to home</span>
+        </a>
+        <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
+      </div>
 
+      <!-- Quick Links -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <h2>Contact</h2>
+        <address>
+          413, avenue Gaston Berger<br>
+          13625 Aix-en-Provence cedex 1<br>
+          Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
+        </address>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h2 class="visually-hidden">Follow Us</h2>
+        <ul class="footer-socials">
+          <li>
+            <a href="https://github.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on GitHub" 
+               data-icon="github"></a>
+          </li>
+          <li>
+            <a href="https://facebook.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on Facebook" 
+               data-icon="facebook"></a>
+          </li>
+          <li>
+            <a href="https://x.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on X" 
+               data-icon="x"></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on Instagram" 
+               data-icon="instagram"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+        ↑ Back to top
+      </button>
+    </div>
+  </footer>
+
+ <!--This style section is exlusiive for the footer, just so we can see the alignment before the actual css appeareance...-->       
+<style>
+    /* Footer Layout */
+footer {
+  padding: 3rem 1rem 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Brand Section */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+}
+
+.home-link img {
+  display: block;
+}
+
+/* Navigation Lists */
+.footer-nav ul,
+.footer-socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav h2,
+.footer-contact h2 {
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.footer-contact address {
+  font-style: normal;
+}
+
+/* Social Media */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.back-to-top {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+</style>
+
+<!--
+  <script>
+    // Back to top functionality - eco-friendly (no libraries)
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+-->
+    
+  </script>
+    
+    <!--Previous footer code, just in case needed, needs to be removed later on...
+    
     <footer>
         <div>
             <img src="images/logo.webp" alt="Hafuyo logo">
@@ -162,7 +375,8 @@ française, dans un délicieux mélange ouvert à tous.">
             <button id="backToTop" class="back-to-top">↑ Back to top</button>
         </div>
     </footer>
-
+-->
+    
     <script src="js/menu.js"></script>
 </body>
 </html>
