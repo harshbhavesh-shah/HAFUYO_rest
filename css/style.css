@@ -275,12 +275,14 @@ section > h2 {
     margin-bottom: 1rem;
 }
 
-video {
+.grid article video {
     border-radius: 15px;
     width: 100%;
     max-width: 1200px;
     height: auto;
     aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .grid article p, figcaption {
