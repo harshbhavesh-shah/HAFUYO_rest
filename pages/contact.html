@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hafuyo</title>
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" sizes="any" href="../images/favicon.ico">
+
     <style>
+        /* --- GLOBAL & LAYOUT STYLES --- */
         body {
-            background-color: white;
+            background-color: rgb(220, 195, 163); /* Matches your theme color */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
         }
 
+        /* This centers the form between header and footer */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        /* --- CONTACT FORM SPECIFIC STYLES --- */
         .form-container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -22,7 +39,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
-            margin: 20px;
         }
 
         .title {
@@ -106,44 +122,246 @@
         button:hover {
             background-color: #6d4827;
         }
+
+        /* --- FOOTER STYLES (Copied from previous prompt) --- */
+        footer {
+            background-color: white; /* Ensure visibility */
+            padding: 3rem 1rem 1.5rem;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            width: fit-content;
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-nav ul,
+        .footer-socials {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .footer-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-nav h2,
+        .footer-contact h2 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact address {
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: #f0f0f0; /* Added for visibility */
+            border-radius: 50%;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .back-to-top {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-socials {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="form-container">
-        <h1 class="title">Contact Us</h1>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../images/logo.webp" alt="Hafuyo logo">
+            </a>
+            <div class="site-title">Hafuyo</div>
+        </div>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-        <form action="https://formsubmit.co/harshenfrance@gmail.com" method="POST">
+        <nav id="nav">
+            <ul>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <input type="hidden" name="_next" value="https://www.hafuyo.me">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Message!">
+    <main>
+        <div class="form-container">
+            <h1 class="title">Contact Us</h1>
 
-            <label for="FirstName">First Name</label>
-            <input type="text" id="FirstName" name="FirstName" required placeholder="Your first name">
+            <form action="https://formsubmit.co/harshenfrance@gmail.com" method="POST">
 
-            <label for="LastName">Last Name</label>
-            <input type="text" id="LastName" name="LastName" required placeholder="Your last name">
+                <input type="hidden" name="_next" value="https://www.hafuyo.me">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Message!">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="name@example.com">
+                <label for="FirstName">First Name</label>
+                <input type="text" id="FirstName" name="FirstName" required placeholder="Your first name">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+                <label for="LastName">Last Name</label>
+                <input type="text" id="LastName" name="LastName" required placeholder="Your last name">
 
-            <div class="checkbox-group">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I accept the terms and conditions</label>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the terms and conditions</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="promotions" name="promotions">
+                    <label for="promotions">I want to receive promotional mails</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../index.html" class="home-link">
+                    <img src="../images/logo.webp" 
+                         alt="" 
+                         role="presentation"
+                         width="40" 
+                         height="40"
+                         loading="lazy"
+                         decoding="async">
+                    <span>Back to home</span>
+                </a>
+                <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
             </div>
 
-            <div class="checkbox-group">
-                <input type="checkbox" id="promotions" name="promotions">
-                <label for="promotions">I want to receive promotional mails</label>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <address>
+                    413, avenue Gaston Berger<br>
+                    13625 Aix-en-Provence cedex 1<br>
+                    Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
+                </address>
             </div>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+            <div class="footer-social">
+                <h2 class="visually-hidden">Follow Us</h2>
+                <ul class="footer-socials">
+                    <li><a href="https://github.com/hafuyo" target="_blank" rel="noopener noreferrer" aria-label="Hafuyo on GitHub">GitHub</a></li>
+                    <li><a href="https://facebook.com/hafuyo" target="_blank" rel="noopener noreferrer" aria-label="Hafuyo on Facebook">FB</a></li>
+                    <li><a href="https://x.com/hafuyo" target="_blank" rel="noopener noreferrer" aria-label="Hafuyo on X">X</a></li>
+                    <li><a href="https://instagram.com/hafuyo" target="_blank" rel="noopener noreferrer" aria-label="Hafuyo on Instagram">IG</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+            <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+                ↑ Back to top
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        const backToTopBtn = document.getElementById('backToTop');
+        if(backToTopBtn){
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+    
+    <script src="../js/menu.js"></script>
 
 </body>
 </html>
