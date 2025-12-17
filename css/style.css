@@ -275,7 +275,7 @@ section > h2 {
     margin-bottom: 1rem;
 }
 
-.grid article video {
+.grid video {
     border-radius: 15px;
     width: 100%;
     max-width: 1200px;
