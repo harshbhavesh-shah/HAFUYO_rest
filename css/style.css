@@ -282,6 +282,15 @@ section > h2 {
     font-size: 1.4rem;
 }
 
+#video-section {
+    justify-content: center;
+    align-items: center;
+}
+
+#video-figure {
+    display: contents;
+}
+
 .grid figure video {
     border-radius: 15px;
     width: 100%;
@@ -291,7 +300,6 @@ section > h2 {
     object-fit: cover;
     margin-bottom: 1rem;
     display: flex;
-    flex: 1, 1; /*needed?*/
     justify-content: center;
     align-items: center;
 }
