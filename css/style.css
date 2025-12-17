@@ -239,14 +239,14 @@ section > h2 {
     width: 100%;
 }
 
-.grid a {
+.grid a, figure {
     flex: 1;
     min-width: 280px;
     text-decoration: none;
     color: inherit;
 }
 
-.grid article {
+.grid article, figure {
     background-color: rgba(200, 175, 143, 0.8);
     border-radius: 20px;
     padding: 1.5rem;
