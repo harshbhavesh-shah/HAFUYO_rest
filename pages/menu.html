@@ -195,60 +195,110 @@
         </section>
 
     </main>
-
+    
     <footer>
-        <nav class="footer-contenu section"  aria-label="Footer navigation">
-            <a href="../index.html" class="home-link">
-                <img src="../images/logo.webp" 
-                 alt="" 
-                 role="presentation"
-                 width="40" 
-                 height="40"
-                 loading="lazy"
-                 decoding="async">
-                <span>Back to home page</span>
-            </a>
-            <ul>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <h4>Contact Information</h4>
-            <p>
-                413, avenue Gaston Berger<br>
-                13625 Aix-en-Provence cedex 1<br>
-                Tél : 04 13 94 63 00
-            </p>
-        </nav>
-        
-        <div> 
-            <ul class="footer-socials">
-                <li>
-                  <a href="../images/logo-github.svg" target="_blank" rel="noopener" aria-label="Hafuyo on GitHub" data-icon="github"></a>
-                </li>
-                <li>
-                  <a href="../images/logo-facebook.svg" target="_blank" rel="noopener" aria-label="Hafuyo on Facebook" data-icon="facebook"></a>
-                </li>
-                <li>
-                  <a href="../images/logo-x.webp" target="_blank" rel="noopener" aria-label="Hafuyo on X" data-icon="x"></a>
-                </li>
-                <li>
-                  <a href="../images/logo-instagram.webp" target="_blank" rel="noopener" aria-label="Hafuyo on Instagram" data-icon="instagram"></a>
-                </li>
-                <li><p>A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025<br>
-                Hafuyo<br>
-                All rights reserved
-            </p>
-            <button id="backToTop" class="back-to-top">↑ Back to top</button>
-        </div>
-    </footer>
+    <div class="footer-container">
+      <!-- Brand & Home Link -->
+      <div class="footer-brand">
+        <a href="../index.html" class="home-link">
+          <img src="../images/logo.webp" 
+               alt="" 
+               role="presentation"
+               width="40" 
+               height="40"
+               loading="lazy"
+               decoding="async">
+          <span>Back to home</span>
+        </a>
+        <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
+      </div>
 
-    <script src="../js/menu.js"></script>
+      <!-- Quick Links -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <h2>Contact</h2>
+        <address>
+          413, avenue Gaston Berger<br>
+          13625 Aix-en-Provence cedex 1<br>
+          Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
+        </address>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h2 class="visually-hidden">Follow Us</h2>
+        <ul class="footer-socials">
+          <li>
+            <a href="https://github.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on GitHub" 
+               data-icon="github"></a>
+          </li>
+          <li>
+            <a href="https://facebook.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on Facebook" 
+               data-icon="facebook"></a>
+          </li>
+          <li>
+            <a href="https://x.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on X" 
+               data-icon="x"></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/hafuyo" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Hafuyo on Instagram" 
+               data-icon="instagram"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+        ↑ Back to top
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    // Back to top functionality - eco-friendly (no libraries)
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Optional: Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.opacity = '1';
+      } else {
+        backToTopBtn.style.opacity = '0.7';
+      }
+    });
+  </script>
 
 </body>
 </html>
