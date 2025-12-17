@@ -46,8 +46,11 @@
             font-size: 14px;
         }
 
+        /* UPDATED: Added date and time to the styling list */
         input[type="text"],
         input[type="email"],
+        input[type="date"],
+        input[type="time"],
         textarea {
             padding: 12px;
             margin-bottom: 20px;
@@ -68,27 +71,6 @@
         textarea {
             resize: vertical;
             min-height: 100px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-            accent-color: #8b5e34;
-            margin-bottom: 0;
-            cursor: pointer;
-        }
-
-        .checkbox-group label {
-            margin-bottom: 0;
-            font-weight: 400;
-            cursor: pointer;
         }
 
         button {
@@ -118,6 +100,7 @@
 
             <input type="hidden" name="_next" value="https://www.hafuyo.me">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Table Reservation!">
 
             <label for="FirstName">First Name</label>
             <input type="text" id="FirstName" name="FirstName" required placeholder="Your first name">
@@ -129,14 +112,15 @@
             <input type="email" id="email" name="email" required placeholder="name@example.com">
 
             <label for="date">Date</label>
-            <input type="date" id="dare" required><br>
+            <input type="date" id="date" name="date" required>
 
             <label for="time">Time</label>
-            <input type="time" id="time" required><br>
+            <input type="time" id="time" name="time" required>
 
             <label for="message">Additional requests</label>
             <textarea id="message" name="message" required placeholder="Please mention any special requests like allergies or food restrictions..."></textarea>
-            <button type="submit">Send Message</button>
+            
+            <button type="submit">Send Request</button>
         </form>
     </div>
 
