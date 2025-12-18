@@ -48,7 +48,8 @@ header a img {
     border-radius: 20%;
 }
 
-header a img:hover {
+header a img:hover, 
+header a img:focus {
     outline-color: black;
     outline-offset: 15px;
 }
