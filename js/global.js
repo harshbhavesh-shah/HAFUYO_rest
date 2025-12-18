@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     window.toggleMenu = function () {
         const nav = document.getElementById('nav');
         const btn = document.getElementById('menuBtn');
@@ -35,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===== HEADER SCROLL (ton code inclus) =====
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== BACK TO TOP =====
     const backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
@@ -55,12 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const themeToggle = document.getElementById('themeToggle');
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    }
 });
-
-const themeToggle = document.getElementById('themeToggle');
-
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-}
