@@ -1,4 +1,4 @@
-//header scroll
+
 const header = document.querySelector('header');
 if(header) {
     window.addEventListener('scroll', () => {
@@ -10,7 +10,17 @@ if(header) {
     });
 }
 
-//back to top
+function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.getElementById('nav');
+    
+    if (hamburger && nav) {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+}
+
+
 const backToTopBtn = document.getElementById('backToTop');
 if(backToTopBtn){
     backToTopBtn.addEventListener('click', () => {
