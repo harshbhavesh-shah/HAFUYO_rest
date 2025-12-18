@@ -6,240 +6,281 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hafuyo | Restaurant international gastronomique</title>
-    <meta name="description" content="Situé à Aix-en-Provence, ce restaurant international propose une 
-sélection des plats les plus emblématiques des gastronomies italienne, mexicaine, chinoise, indienne et 
-française, dans un délicieux mélange ouvert à tous.">
+    <title>About Us | Hafuyo Restaurant</title>
+    <meta name="description" content="Discover the story behind Hafuyo, our passionate team, and our commitment to bringing authentic international cuisine to Aix-en-Provence.">
     <meta name="author" content="L'équipe du Hafuyo Restaurant">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Primary icons, older browser compatibility, and different sizes - UPLOAD files and match names and formats!! -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" sizes="any" href="images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="manifest" href="images/site.webmanifest">
+    <!-- Primary icons, older browser compatibility, and different sizes -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" sizes="any" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../images/site.webmanifest">
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <a href="index.html">
-                <img src="images/logo.webp" alt="Hafuyo logo">
+            <a href="../index.html">
+                <img src="../images/logo.webp" alt="Hafuyo logo">
             </a>
             <div class="site-title">Hafuyo</div>
         </div>
         
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <button class="hamburger" 
+        id="menuBtn"
+        onclick="toggleMenu()" 
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        type="button"> <span></span>
+        <span></span>
+        <span></span>
+        </button>
 
         <nav id="nav">
             <ul>
-                <li><a href="pages/reservations.html">Reservations</a></li>
-                <li><a href="pages/menu.html">Menu</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/contact.html">Contact Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <h1>HAFUYO</h1>
-            <h2>"Taste and travel the world"</h2>
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" alt="One of our special dishes">
-            <p>
-                Welcome to Hafuyo, where culinary traditions from around the globe unite on a single plate. 
-                Our passionate chefs craft authentic dishes inspired by Italian, Mexican, Chinese, Indian, 
-                and French cuisines, each prepared with the finest ingredients and a modern twist. 
-                Located in the heart of Aix-en-Provence, we invite you to embark on a gastronomic journey 
-                that celebrates diversity, flavor, and the art of fine dining.
-            </p>
+        <section class="hero about-hero">
+            <h1>About Hafuyo</h1>
+            <p class="hero-subtitle">Where the world comes together on a plate</p>
         </section>
 
-        <!-- Banner Section -->
-        <section class="banner-section">
-            <h2>DISCOVER</h2>
-            <article class="banner">
-                <a href="pages/offer.html">
-                    <div class="banner-image">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200" alt="Limited Offer">
-                        <div class="banner-text">
-                            <h3>LIMITED OFFER!</h3>
-                        </div>
-                    </div>
-                </a>
-                <p><strong>This winter only, for every new customer visiting us (up to December 31st), get a 20% discount on your meals and drinks</strong></p>
-            </article>
+        <!-- Introduction -->
+        <section class="about-intro">
+            <div class="intro-content">
+                <h2>Our Story</h2>
+                <p>
+                    Founded in 2020, Hafuyo was born from a simple yet powerful idea: to celebrate the rich diversity 
+                    of global cuisine in one welcoming space. Our name, "Hafuyo," represents harmony and fusion—a 
+                    philosophy that guides everything we do.
+                </p>
+                <p>
+                    Located in the heart of Aix-en-Provence, we bring together the finest culinary traditions from 
+                    Italy, Mexico, China, India, and France. Each dish tells a story, honors a tradition, and invites 
+                    you on a journey across continents.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Inside our restaurant">
+            </div>
         </section>
 
-        <!-- Grid Cards -->
-        <section class="grid">
-            <h2>NEW DISHES AND MENU</h2>
-            <a href="pages/new-dishes.html">
-                <article>
-                    <h3>Discover our newly added dishes!</h3>
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="One of our new dishes">
-                    <p>Freshly crafted Italian, Greek and Turkish dishes for you to enjoy, incorporating traditional flavors with a modern twist</p>
+        <!-- Mission & Values -->
+        <section class="mission-values">
+            <h2>What We Stand For</h2>
+            <div class="values-grid">
+                <article class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Cultural Authenticity</h3>
+                    <p>We honor traditional recipes and techniques, working with authentic ingredients to preserve the true essence of each cuisine.</p>
                 </article>
-            </a>
-            <a href="pages/menu.html">
-                <article>
-                    <h3>Take a look at our complete menu</h3>
-                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600" alt="Reference image of our menu">
-                    <p>Take a look at our full drinks and food menu and get a taste of your order even before you get here</p>
+                <article class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Quality First</h3>
+                    <p>From farm to table, we partner with trusted suppliers to ensure every ingredient meets our exacting standards.</p>
                 </article>
-            </a>
-            <a href="pages/ingredients.html">
-                <article>
-                    <h3>Where our ingredients come from</h3>
-                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600" alt="Fresh local ingredients">
-                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
+                <article class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to eco-friendly practices, supporting local producers and minimizing our environmental footprint.</p>
                 </article>
-            </a>
+                <article class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Community</h3>
+                    <p>Hafuyo is more than a restaurant—it's a gathering place where cultures meet and memories are made.</p>
+                </article>
+            </div>
         </section>
 
-        <!--Added by yotzan, you can take a look, also  not definitive code... -->
-        <section class="grid" id="video-section">
-            <h2>
-                Discover one of our iconic recipes
-            </h2>
-            <figure id="video-figure">
-                <video lang="es" controls preload="metadata" width="720"
-                    poster="images/video-poster.webp" aria-describedby="video-desc">
-                    
-                    <source src="images/video_hafuyo_tacos.mp4" type="video/mp4">
-                    
-                    <track kind="captions" srclang="es" src="images/captions_SPA.vtt" label="Español">
-                    <track kind="subtitles" srclang="en" src="images/subtitles_EN.vtt" label="English">
-                    <track kind="subtitles" srclang="fr" src="images/subtitles_FR.vtt" label="Français" default>
-
-                    Your browser does not support the video tag.
-                    <p>
-                        Your browser does not support this video html tag. Here you can
-                        <a href="images/video_hafuyo_tacos.mp4" download>download the video (MP4)</a> instead.
-                    </p>
-                    <!-- Here you can donwload the video or "Here is a link to the video"?? depends on what we want... see -->
-
-                </video>
-
-             <!-- description for SEO & screen readers -->
-                <figcaption id="video-desc">
-                Traditional Mexican tacos al pastor recipe explained step by step. <br>
-                    Subtitles available in English and French.<br>
-                    <span>
-                        Note: this chef is not actually part of our team it is just a 
-                    representation of the kind of food we hypothetically serve.
-                    </span>
-                </figcaption>
-            </figure>
+        <!-- Our Chefs -->
+        <section class="chefs-section">
+            <h2>Meet Our Culinary Team</h2>
+            <p class="section-subtitle">Five chefs, five cuisines, one extraordinary experience</p>
             
-            </section>
+            <div class="chefs-grid">
+                <article class="chef-card">
+                    <div class="chef-image">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Chef Marco Rossi">
+                    </div>
+                    <div class="chef-info">
+                        <h3>Marco Rossi</h3>
+                        <p class="chef-title">Head Chef - Italian Cuisine</p>
+                        <p class="chef-bio">
+                            Born in Florence, Marco trained in traditional Tuscan kitchens before bringing his passion 
+                            for fresh pasta and regional Italian flavors to Hafuyo.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="chef-card">
+                    <div class="chef-image">
+                        <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=400" alt="Chef Maria González">
+                    </div>
+                    <div class="chef-info">
+                        <h3>Maria González</h3>
+                        <p class="chef-title">Head Chef - Mexican Cuisine</p>
+                        <p class="chef-bio">
+                            A native of Oaxaca, Maria is renowned for her handmade tortillas and complex mole sauces, 
+                            bringing authentic Mexican soul to every plate.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="chef-card">
+                    <div class="chef-image">
+                        <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=400" alt="Chef Li Wei">
+                    </div>
+                    <div class="chef-info">
+                        <h3>Li Wei</h3>
+                        <p class="chef-title">Head Chef - Chinese Cuisine</p>
+                        <p class="chef-bio">
+                            Trained in Sichuan, Li Wei masterfully balances the five flavors of Chinese cooking with 
+                            precision, creativity, and respect for tradition.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="chef-card">
+                    <div class="chef-image">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400" alt="Chef Priya Sharma">
+                    </div>
+                    <div class="chef-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="chef-title">Head Chef - Indian Cuisine</p>
+                        <p class="chef-bio">
+                            From Mumbai, Priya creates aromatic dishes using family recipes and expertly blended spices 
+                            sourced directly from Indian markets.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="chef-card">
+                    <div class="chef-image">
+                        <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=400" alt="Chef Jean Dubois">
+                    </div>
+                    <div class="chef-info">
+                        <h3>Jean Dubois</h3>
+                        <p class="chef-title">Head Chef - French Cuisine</p>
+                        <p class="chef-bio">
+                            A Provence native with classical training, Jean brings refined technique and local expertise 
+                            to our French selections with elegance and flair.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Experience Hafuyo</h2>
+                <p>Join us for an unforgettable culinary journey. Reserve your table today and taste the world.</p>
+                <a href="reservations.html" class="cta-button">Make a Reservation</a>
+            </div>
+        </section>
     </main>
     
-<!--I updated the footer to be complete according to instructions, etc... I added styles for the footer here, but I will change it later to the css sheet
-    just so we can see how it would look... also not finished style yet...I still need to remove some stuff...-->
-<footer>
-    <div class="footer-container">
-      <!-- Brand & Home Link -->
-      <div class="footer-brand">
-        <a href="../index.html" class="home-link">
-          <img src="../images/logo.webp" 
-               alt="" 
-               role="presentation"
-               width="40" 
-               height="40"
-               loading="lazy"
-               decoding="async">
-          <span>Back to home</span>
-        </a>
-        <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
-      </div>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-brand">
+            <a href="../index.html" class="home-link">
+              <img src="../images/logo.webp" 
+                   alt=""
+                   width="40" 
+                   height="40"
+                   loading="lazy"
+                   decoding="async">
+              <span>Back to home</span>
+            </a>
+            <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
+          </div>
 
-      <!-- Quick Links -->
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
 
-      <!-- Contact Information -->
-      <div class="footer-contact">
-        <h2>Contact</h2>
-        <address>
-          413, avenue Gaston Berger<br>
-          13625 Aix-en-Provence cedex 1<br>
-          Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
-        </address>
-      </div>
+          <div class="footer-contact">
+            <h2>Contact</h2>
+            <address>
+              413, avenue Gaston Berger<br>
+              13625 Aix-en-Provence cedex 1<br>
+              Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
+            </address>
+          </div>
 
-      <!-- Social Media -->
-      <div class="footer-social">
-        <h2 class="visually-hidden">Follow Us</h2>
-        <ul class="footer-socials">
-          <li>
-            <a href="https://github.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on GitHub" 
-               data-icon="github"></a>
-          </li>
-          <li>
-            <a href="https://facebook.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on Facebook" 
-               data-icon="facebook"></a>
-          </li>
-          <li>
-            <a href="https://x.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on X" 
-               data-icon="x"></a>
-          </li>
-          <li>
-            <a href="https://instagram.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on Instagram" 
-               data-icon="instagram"></a>
-          </li>
-        </ul>
-      </div>
-    </div>
+          <div class="footer-social">
+            <h2 class="visually-hidden">Follow Us</h2>
+            <ul class="footer-socials">
+              <li>
+                <a href="https://github.com/hafuyo" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="Hafuyo on GitHub" 
+                   data-icon="github"></a>
+              </li>
+              <li>
+                <a href="https://facebook.com/hafuyo" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="Hafuyo on Facebook" 
+                   data-icon="facebook"></a>
+              </li>
+              <li>
+                <a href="https://x.com/hafuyo" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="Hafuyo on X" 
+                   data-icon="x"></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/hafuyo" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="Hafuyo on Instagram" 
+                   data-icon="instagram"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
-      <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
-        ↑ Back to top
-      </button>
-    </div>
-  </footer>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+          <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+            ↑ Back to top
+          </button>
+        </div>
+      </footer>
 
-    <script src="js/menu.js"></script>
+    <script src="../js/menu.js"></script>
     <script>
-    const header = document.querySelector('header');
+        const header = document.querySelector('header');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-</script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
     
 </html>
