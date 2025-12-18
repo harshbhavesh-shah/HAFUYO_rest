@@ -20,12 +20,12 @@
 <body>
 
     <header>
-        <div class="logo-container">
+        <span class="logo-container">
             <a href="../index.html">
                 <img src="../images/logo.webp" alt="Hafuyo logo">
             </a>
-            <div class="site-title">Hafuyo</div>
-        </div>
+            <span class="site-title">Hafuyo</span>
+        </span>
         
         <button class="hamburger" id="menuBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
             <span></span>
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-        <div class="form-container">
+        <section class="form-container">
             <h1 class="title">Contact Us</h1>
 
             <form action="https://formsubmit.co/harshenfrance@gmail.com" method="POST">
@@ -65,84 +65,85 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
 
-                <div class="checkbox-group">
+                <p class="checkbox-group">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">I accept the terms and conditions</label>
-                </div>
+                </p>
 
-                <div class="checkbox-group">
+                <p class="checkbox-group">
                     <input type="checkbox" id="promotions" name="promotions">
                     <label for="promotions">I want to receive promotional mails</label>
-                </div>
+                </p>
 
                 <button type="submit">Send Message</button>
             </form>
-        </div>
+        </section>
     </main>
-<footer class="hafuyo-footer">
-    <div class="footer-container">
-      
-      <div class="footer-col brand-col">
-        <a href="../index.html" class="footer-logo">
-          <img src="../images/logo.webp" alt="Hafuyo" width="50" height="50">
-        </a>
-        <p class="footer-desc">
-          A culinary journey celebrating global flavors in the heart of Aix-en-Provence.
-        </p>
-      </div>
 
-      <div class="footer-col">
-        <h3 class="footer-heading">Quick Links</h3>
-        <ul class="footer-links-list">
-          <li><a href="reservations.html">Reservations</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-heading">Contact</h3>
-        <address class="footer-address">
-          413, avenue Gaston Berger<br>
-          13625 Aix-en-Provence<br>
-          <a href="tel:+33413946300" class="footer-phone">Tel: 04 13 94 63 00</a>
-        </address>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-heading">Follow Us</h3>
-        <p class="social-text">Stay connected with us.</p>
-        <ul class="footer-social-icons">
-          <li>
-            <a href="https://github.com/hafuyo" 
-            target="_blank" rel="noopener noreferrer" 
-            aria-label="GitHub">
-            <img src="../images/logo-github.svg" alt="">
-        </a>
-    </li>
-          <li><a href="https://www.facebook.com/IUTAix/" 
-            target="_blank" rel="noopener noreferrer" 
-            aria-label="Facebook">
-            <img src="../images/logo-facebook.svg" alt="">
-        </a>
-    </li>
-          <li><a href="https://www.instagram.com/univ_amu/" 
-            target="_blank" rel="noopener noreferrer" 
-            aria-label="Instagram">
-            <img src="../images/logo-instagram.webp" alt="">
-          </a>
+    <footer class="hafuyo-footer">
+        <section class="footer-container">
+          
+          <section class="footer-col brand-col">
+            <a href="../index.html" class="footer-logo">
+              <img src="../images/logo.webp" alt="Hafuyo" width="50" height="50">
+            </a>
+            <p class="footer-desc">
+              A culinary journey celebrating global flavors in the heart of Aix-en-Provence.
+            </p>
+          </section>
+    
+          <nav class="footer-col" aria-label="Footer Navigation">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links-list">
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+    
+          <address class="footer-col">
+            <h3 class="footer-heading">Contact</h3>
+            <span class="footer-address">
+              413, avenue Gaston Berger<br>
+              13625 Aix-en-Provence<br>
+              <a href="tel:+33413946300" class="footer-phone">Tel: 04 13 94 63 00</a>
+            </span>
+          </address>
+    
+          <section class="footer-col">
+            <h3 class="footer-heading">Follow Us</h3>
+            <p class="social-text">Stay connected with us.</p>
+            <ul class="footer-social-icons">
+              <li>
+                <a href="https://github.com/hafuyo" 
+                target="_blank" rel="noopener noreferrer" 
+                aria-label="GitHub">
+                <img src="../images/logo-github.svg" alt="">
+            </a>
         </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
-      <button id="backToTop" class="back-to-top">↑ Back to top</button>
-    </div>
-  </footer>
+              <li><a href="https://www.facebook.com/IUTAix/" 
+                target="_blank" rel="noopener noreferrer" 
+                aria-label="Facebook">
+                <img src="../images/logo-facebook.svg" alt="">
+            </a>
+        </li>
+              <li><a href="https://www.instagram.com/univ_amu/" 
+                target="_blank" rel="noopener noreferrer" 
+                aria-label="Instagram">
+                <img src="../images/logo-instagram.webp" alt="">
+              </a>
+            </li>
+            </ul>
+          </section>
+    
+        </section>
+    
+        <section class="footer-bottom">
+          <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+          <button id="backToTop" class="back-to-top">↑ Back to top</button>
+        </section>
+      </footer>
 
 
     <script src="../js/menu.js"></script>
