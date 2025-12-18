@@ -1,4 +1,6 @@
-/* --- GLOBAL & LAYOUT STYLES --- */
+/* ========================================= */
+/* === GLOBAL & LAYOUT (Matches style(1).css) === */
+/* ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +8,16 @@
 }
 
 body {
-    background-color: white; 
-    font-family: Arial, sans-serif; /* Updated to match style(1).css */
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Updated to Arial to match style(1) */
+    padding-top: 90px; /* Updated to 90px to match style(1) */
+    background-color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 90px; /* Updated from 80px to 90px */
 }
 
 /* ========================================= */
-/* === HEADER STYLES (From style(1).css) === */
+/* === HEADER STYLES (Matches style(1).css) === */
 /* ========================================= */
 header {
     position: fixed;
@@ -49,7 +49,7 @@ header.scrolled {
 }
 
 header a img {
-    height: 60px; /* Increased from 50px */
+    height: 60px;
     width: auto;
     outline: 1px solid transparent;
     outline-offset: 10px;
@@ -69,7 +69,6 @@ header a img:focus {
     color: #333;
 }
 
-/* HAMBURGER MENU */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -102,7 +101,6 @@ header a img:focus {
     transform: translateY(-8px) rotate(-45deg) !important;
 }
 
-/* NAVIGATION */
 nav ul {
     display: flex;
     list-style: none;
@@ -113,15 +111,14 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 1.5rem; /* Increased size */
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: red; /* Changed to red */
+    color: red;
 }
 
-/* Pipe Separator */
 nav ul li:not(:last-child)::after {
     content: "|";
     color: #999;
@@ -131,18 +128,17 @@ nav ul li:not(:last-child)::after {
 }
 
 /* ========================================= */
-/* === FORM & MAIN CONTENT (Specific to Contact) === */
+/* === MAIN & FORM (Contact Specific) === */
 /* ========================================= */
 main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1rem;
     width: 100%;
-    box-sizing: border-box;
-    max-width: 1400px; /* Added max-width consistency */
-    margin: 0 auto;
 }
 
 .form-container {
@@ -152,7 +148,6 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 90%; 
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -188,7 +183,6 @@ input[type="text"], input[type="email"], textarea {
     font-family: inherit;
     transition: border-color 0.3s ease;
     width: 100%;
-    box-sizing: border-box;
 }
 
 input:focus, textarea:focus {
@@ -228,7 +222,7 @@ button {
 button:hover { background-color: #6d4827; }
 
 /* ========================================= */
-/* === FOOTER STYLES (From style(1).css) === */
+/* === FOOTER STYLES (Matches style(1).css) === */
 /* ========================================= */
 .hafuyo-footer {
     background-color: #f8f5f0; 
@@ -246,7 +240,6 @@ button:hover { background-color: #6d4827; }
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 50px;
-    text-align: left; /* Ensure text alignment matches */
 }
 
 .brand-col {
@@ -383,7 +376,6 @@ button:hover { background-color: #6d4827; }
         display: flex;
     }
 
-    /* Remove pipes on mobile */
     nav ul li:not(:last-child)::after {
         content: none;
     }
@@ -442,6 +434,14 @@ button:hover { background-color: #6d4827; }
         padding: 2.5rem 1.5rem;
     }
 
+    footer > div:first-child {
+        justify-content: center;
+    }
+
+    footer img {
+        height: 70px;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -451,9 +451,8 @@ button:hover { background-color: #6d4827; }
     .footer-bottom {
         flex-direction: column;
         text-align: center;
-        gap: 15px;
     }
-    
+
     .brand-col { grid-column: span 1; }
     .footer-social-icons { justify-content: center; }
     .footer-links-list a:hover { transform: none; }
@@ -474,6 +473,19 @@ button:hover { background-color: #6d4827; }
 
     header a img {
         height: 40px;
+    }
+
+    .banner-text {
+        padding: 1rem 2rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    footer img {
+        height: 60px;
     }
 }
 
