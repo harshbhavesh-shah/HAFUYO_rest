@@ -11,7 +11,7 @@ body {
 
 /* ========== HEADER ========== */
 header {
-    position: scrolled;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -35,6 +35,7 @@ header.scrolled {
 
             /* Optional: Add a subtle shadow when scrolling */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
 .logo-container {
     display: flex;
