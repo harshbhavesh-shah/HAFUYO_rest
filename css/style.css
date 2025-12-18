@@ -23,6 +23,7 @@ header {
     background-color: rgba(200, 175, 143, 0.3);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition border-background: 0.1s;
 }
 
 header.scrolled {
@@ -35,6 +36,9 @@ header.scrolled {
 
             /* Optional: Add a subtle shadow when scrolling */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+            border-bottom: 2px solid rgba(88, 80, 69, 0.8);
+    
 }
 
 .logo-container {
