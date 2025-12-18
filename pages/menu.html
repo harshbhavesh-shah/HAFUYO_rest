@@ -13,7 +13,6 @@
     
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Primary icons, older browser compatibility, and different sizes - UPLOAD files and match names and formats!! -->
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
     <link rel="icon" sizes="any" href="../images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
@@ -23,28 +22,34 @@
 
 </head>
 <body>
-  <header>
+    
+   <header>
         <div class="logo-container">
-            <a href="../index.html">
-                <img src="../images/logo.webp" alt="Hafuyo logo">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="Hafuyo logo">
             </a>
             <div class="site-title">Hafuyo</div>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        
+        <button class="hamburger" 
+            id="menuBtn" 
+            onclick="toggleMenu()" 
+            aria-label="Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
+
         <nav id="nav">
             <ul>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="pages/reservations.html">Reservations</a></li>
+                <li><a href="pages/menu.html">Menu</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="pages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header> 
-
+    </header>
+    
     <main>
         
         <section class="hero">
@@ -359,7 +364,7 @@
     </div>
   </footer>
 
-<script src="../js/test1.js"></script>
+<script src="../js/global.js"></script>
 
 </body>
 </html>
