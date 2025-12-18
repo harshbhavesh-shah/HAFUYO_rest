@@ -48,16 +48,26 @@
     <main>
         <!--remove banner section if not useful code-->
         <section >
+            
             <h1>Notre Menu</h1>
+            
             <article class="banner">
                 <a href="this link is not working for now">
                     
                 </a>
+                <nav class="page-menu" aria-label="Page sections">
+                    <ul>
+                        <li><a href="#entrees">Entrées</a></li>
+                        <li><a href="#main-dishes">Main Dishes</a></li>
+                        <li><a href="#drinks">Drinks</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </nav>
                 <p>For every new customer visiting us up to August 31st, get a 25% discount on your meals and drinks</p>
             </article>
         </section>
 
-        <section class="grid">
+        <section class="grid" id="entrees">
 
             <h2>Entrées</h2>
 
@@ -108,7 +118,7 @@
             </a>
 
         </section>
-        <section class="grid">
+        <section class="grid" id="main-dishes">
 
             <h2>Main dishes</h2>
 
@@ -159,7 +169,7 @@
 
         </section>
 
-        <section class="grid">
+        <section class="grid" id="drinks">
             
             <h2>Drinks</h2>
             
@@ -208,7 +218,8 @@
                 </article>
             </a>
         </section>
-        <section class="grid">
+        
+        <section class="grid" id="desserts">
             
             <h2>Desserts</h2>
             
