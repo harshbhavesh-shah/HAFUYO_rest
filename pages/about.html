@@ -1,5 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About Us | Hafuyo Restaurant</title>
+    <meta name="description" content="Discover the story behind Hafuyo, our passionate team, and our commitment to bringing authentic international cuisine to Aix-en-Provence.">
+    <meta name="author" content="L'équipe du Hafuyo Restaurant">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Primary icons, older browser compatibility, and different sizes -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" sizes="any" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../images/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../images/logo.webp" alt="Hafuyo logo">
+            </a>
+            <div class="site-title">Hafuyo</div>
+        </div>
+        
+        <button class="hamburger" id="menuBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html" aria-current="page">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero about-hero">
+            <div class="hero-content">
+                <h1>Our Story</h1>
+                <p class="hero-subtitle">Harmony, Fusion, and Global Flavors</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container flex-container">
+                <div class="text-content">
+                    <h2>Founded in Harmony</h2>
+                    <p>Founded in 2020, Hafuyo was born from a simple yet powerful idea: to celebrate the rich diversity of global cuisine in one welcoming space. Our name, <strong>"Hafuyo"</strong>, represents harmony and fusion.</p>
+                    <p>Located in the heart of Aix-en-Provence, we bring together the finest culinary traditions from Italy, Mexico, China, India, and France.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Ambiance chaleureuse du restaurant Hafuyo">
+                </div>
+            </div>
+        </section>
+
+<section class="chefs-section">
+    <h2>OUR CHEFS</h2>
+
+    <div class="chefs-grid">
+        <article class="chef-card">
+            <h3>Ha</h3>
+            <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600" alt="Chef Ha">
+            <p>Expert in Indian spices and slow-cooked dishes.</p>
+        </article>
+
+        <article class="chef-card">
+            <h3>Fu</h3>
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600" alt="Chef Fu">
+            <p>Chinese cuisine chef focused on balance and freshness.</p>
+        </article>
+
+        <article class="chef-card">
+            <h3>Yo</h3>
+            <img src="https://images.unsplash.com/photo-1541542684-4d9c73c6d5b6?w=600" alt="Chef Yo">
+            <p>Mexican cuisine expert with vibrant street flavors.</p>
+        </article>
         <article class="chef-card">
             <h3>Lo</h3>
             <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600" alt="Chef Lo">
             <p>Italian cuisine specialist, master of handmade tacos nd Tuscan flavors.</p>
         </article>
+    </div>
+</section>
+    </main>
+    
+<footer class="hafuyo-footer">
+    <div class="footer-container">
+      
+      <div class="footer-col brand-col">
+        <a href="../index.html" class="footer-logo">
+          <img src="../images/logo.webp" alt="Hafuyo" width="50" height="50">
+        </a>
+        <p class="footer-desc">
+          A culinary journey celebrating global flavors in the heart of Aix-en-Provence.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact</h3>
+        <address class="footer-address">
+          413, avenue Gaston Berger<br>
+          13625 Aix-en-Provence<br>
+          <a href="tel:+33413946300" class="footer-phone">Tel: 04 13 94 63 00</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Follow Us</h3>
+        <p class="social-text">Stay connected with us.</p>
+        <ul class="footer-social-icons">
+          <li><a href="https://github.com/hafuyo" target="_blank" aria-label="GitHub">Git</a></li>
+          <li><a href="https://facebook.com/hafuyo" target="_blank" aria-label="Facebook">FB</a></li>
+          <li><a href="https://x.com/hafuyo" target="_blank" aria-label="X">X</a></li>
+          <li><a href="https://instagram.com/hafuyo" target="_blank" aria-label="Instagram">IG</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top">↑ Back to top</button>
+    </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+
+</body>
+    
+</html>
