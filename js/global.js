@@ -74,14 +74,3 @@ document.getElementById('backToTop').addEventListener('click', () => {
     });
 });
 //menu.js code end
-
-//THIS CODE WAS ORIGINALLY ON footer.js file
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
