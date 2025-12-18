@@ -350,18 +350,36 @@ section > h2 {
 }
 
 /* --- Column 1: Brand --- */
+/* --- Column 1: Brand --- */
+.brand-col {
+    display: flex;
+    flex-direction: column; /* Stacks logo and text vertically */
+    align-items: center;    /* Centers them horizontally */
+    text-align: center;     /* Centers the text inside the description */
+}
+
 .brand-col .footer-logo {
     display: flex;
+    justify-content: center; /* Ensures content inside the link is centered */
     align-items: center;
-    gap: 12px;
     text-decoration: none;
     color: #2c241b;
     margin-bottom: 20px;
 }
-.brand-col .footer-logo img { height: 45px; width: auto; }
-.brand-col .footer-logo span { font-weight: bold; font-size: 1.4rem; }
-.footer-desc { opacity: 0.9; max-width: 280px; }
 
+.brand-col .footer-logo img { 
+    height: 45px; 
+    width: auto; 
+}
+
+/* Removed the span styling since the brand name text is deleted */
+
+.footer-desc { 
+    opacity: 0.9; 
+    max-width: 280px; 
+    /* Ensures the paragraph text is centered */
+    margin: 0 auto; 
+}
 /* --- Headings --- */
 .footer-heading {
     color: #2c241b;
