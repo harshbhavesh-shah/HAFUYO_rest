@@ -1,5 +1,5 @@
 /* ========================================= */
-/* === GLOBAL & LAYOUT (Matches style(1).css) === */
+/* === GLOBAL & LAYOUT === */
 /* ========================================= */
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Changed to Arial to match style(1) */
+    font-family: Arial, sans-serif;
     padding-top: 90px;
     background-color: white;
     display: flex;
@@ -17,7 +17,7 @@ body {
 }
 
 /* ========================================= */
-/* === HEADER STYLES (Matches style(1).css) === */
+/* === HEADER STYLES === */
 /* ========================================= */
 header {
     position: fixed;
@@ -101,13 +101,15 @@ header a img:focus {
     transform: translateY(-8px) rotate(-45deg) !important;
 }
 
-nav ul {
+/* === NAVIGATION (FIXED: Targeted to #nav only) === */
+/* This prevents header styles from messing up the footer links */
+#nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-nav ul li a {
+#nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -115,11 +117,11 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+#nav ul li a:hover {
     color: red;
 }
 
-nav ul li:not(:last-child)::after {
+#nav ul li:not(:last-child)::after {
     content: "|";
     color: #999;
     margin-left: 2rem;
@@ -134,7 +136,7 @@ main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
-    flex: 1; /* Ensures footer stays at bottom */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +214,7 @@ button {
 button:hover { background-color: #6d4827; }
 
 /* ========================================= */
-/* === FOOTER STYLES (Matches style(1).css) === */
+/* === FOOTER STYLES (Fixed) === */
 /* ========================================= */
 .hafuyo-footer {
     background-color: #f8f5f0; 
@@ -230,6 +232,12 @@ button:hover { background-color: #6d4827; }
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 50px;
+}
+
+/* FIX: Semantic resets for layout consistency */
+.brand-col, address.footer-col, nav.footer-col {
+    display: block;
+    font-style: normal; 
 }
 
 .brand-col {
@@ -268,8 +276,16 @@ button:hover { background-color: #6d4827; }
     letter-spacing: 0.5px;
 }
 
-.footer-links-list { list-style: none; padding: 0; margin: 0; }
-.footer-links-list li { margin-bottom: 12px; }
+.footer-links-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.footer-links-list li { 
+    margin-bottom: 12px; 
+    display: block;
+}
 
 .footer-links-list a,
 .footer-phone {
@@ -285,10 +301,10 @@ button:hover { background-color: #6d4827; }
     transform: translateX(5px); 
 }
 
-.footer-address { font-style: normal; }
 .footer-phone { display: block; margin-top: 15px; font-weight: 700; }
 
 .social-text { margin-bottom: 20px; opacity: 0.9; }
+
 .footer-social-icons {
     display: flex;
     gap: 12px;
@@ -311,6 +327,12 @@ button:hover { background-color: #6d4827; }
     font-size: 0.85rem;
     border: 1px solid #e0dbd0;
     transition: all 0.3s ease;
+}
+
+/* FIX: Restrict size of images inside social icons */
+.footer-social-icons img {
+    width: 20px;
+    height: auto;
 }
 
 .footer-social-icons a:hover {
@@ -354,7 +376,7 @@ button:hover { background-color: #6d4827; }
 }
 
 /* ========================================= */
-/* === RESPONSIVE MEDIA QUERIES (Matches style(1).css) === */
+/* === RESPONSIVE MEDIA QUERIES === */
 /* ========================================= */
 @media (max-width: 768px) {
     body {
@@ -365,11 +387,11 @@ button:hover { background-color: #6d4827; }
         display: flex;
     }
 
-    nav ul li:not(:last-child)::after {
+    #nav ul li:not(:last-child)::after {
         content: none;
     }
 
-    nav {
+    #nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -381,21 +403,21 @@ button:hover { background-color: #6d4827; }
         padding-top: 80px;
     }
 
-    nav.active {
+    #nav.active {
         right: 0;
     }
 
-    nav ul {
+    #nav ul {
         flex-direction: column;
         gap: 0;
         padding: 2rem;
     }
 
-    nav ul li {
+    #nav ul li {
         border-bottom: 1px solid #eee;
     }
 
-    nav ul li a {
+    #nav ul li a {
         display: block;
         padding: 1rem 0;
         font-size: 1.1rem;
@@ -422,17 +444,10 @@ button:hover { background-color: #6d4827; }
         padding: 2.5rem 1.5rem;
     }
 
-    footer > div:first-child {
-        justify-content: center;
-    }
-
-    footer img {
-        height: 70px;
-    }
-
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
     }
 
     .footer-bottom {
@@ -440,7 +455,12 @@ button:hover { background-color: #6d4827; }
         text-align: center;
     }
 
-    .footer-socials {
+    /* Override alignments for mobile */
+    .footer-links-list li, .footer-col {
+        text-align: center;
+    }
+
+    .footer-social-icons {
         justify-content: center;
     }
 }
@@ -460,10 +480,6 @@ button:hover { background-color: #6d4827; }
 
     header a img {
         height: 40px;
-    }
-
-    .banner-text {
-        padding: 1rem 2rem;
     }
 
     footer {
