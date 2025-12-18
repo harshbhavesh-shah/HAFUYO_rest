@@ -101,13 +101,14 @@ header a img:focus {
     transform: translateY(-8px) rotate(-45deg) !important;
 }
 
-nav ul {
+/* === NAVIGATION (FIXED: Targeted to #nav only) === */
+#nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-nav ul li a {
+#nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -115,11 +116,11 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+#nav ul li a:hover {
     color: red;
 }
 
-nav ul li:not(:last-child)::after {
+#nav ul li:not(:last-child)::after {
     content: "|";
     color: #999;
     margin-left: 2rem;
@@ -128,7 +129,7 @@ nav ul li:not(:last-child)::after {
 }
 
 /* ========================================= */
-/* === MAIN & FORM (Contact Specific) === */
+/* === MAIN & FORM === */
 /* ========================================= */
 main {
     max-width: 1400px;
@@ -192,7 +193,6 @@ input:focus, textarea:focus {
 
 textarea { resize: vertical; min-height: 100px; }
 
-/* FIX: Reset margins on checkbox paragraphs */
 p.checkbox-group {
     display: flex;
     align-items: center;
@@ -224,7 +224,7 @@ button {
 button:hover { background-color: #6d4827; }
 
 /* ========================================= */
-/* === FOOTER STYLES (Cleaned & Fixed) === */
+/* === FOOTER STYLES === */
 /* ========================================= */
 .hafuyo-footer {
     background-color: #f8f5f0; 
@@ -239,18 +239,16 @@ button:hover { background-color: #6d4827; }
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    /* Grid layout: 2fr (Brand), 1fr (Links), 1fr (Contact), 1.5fr (Social) */
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 50px;
 }
 
-/* Base styles for columns to handle semantic tags */
-.footer-col {
+.brand-col, address.footer-col, nav.footer-col {
     display: block;
+    font-style: normal; 
 }
 
-/* Brand Column Specifics */
 .brand-col {
     display: flex;
     flex-direction: column;
@@ -278,7 +276,6 @@ button:hover { background-color: #6d4827; }
     margin: 0 auto; 
 }
 
-/* Headings */
 .footer-heading {
     color: #2c241b;
     font-size: 1.05rem;
@@ -288,50 +285,34 @@ button:hover { background-color: #6d4827; }
     letter-spacing: 0.5px;
 }
 
-/* Quick Links List - FIXED ALIGNMENT */
 .footer-links-list { 
     list-style: none; 
     padding: 0; 
     margin: 0; 
 }
 
+/* This restores the vertical stacking for footer links */
 .footer-links-list li { 
     margin-bottom: 12px; 
+    display: block;
 }
 
-.footer-links-list a {
+.footer-links-list a,
+.footer-phone {
     text-decoration: none;
     color: #4a3b2a;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
-.footer-links-list a:hover {
+.footer-links-list a:hover,
+.footer-phone:hover {
     color: #8b5e34; 
     transform: translateX(5px); 
 }
 
-/* Contact Info */
-.footer-address { 
-    font-style: normal; 
-    display: block;
-}
+.footer-phone { display: block; margin-top: 15px; font-weight: 700; }
 
-.footer-phone { 
-    display: block; 
-    margin-top: 15px; 
-    font-weight: 700; 
-    text-decoration: none;
-    color: #4a3b2a;
-    transition: all 0.3s ease;
-}
-
-.footer-phone:hover {
-    color: #8b5e34;
-    transform: translateX(5px);
-}
-
-/* Social Icons */
 .social-text { margin-bottom: 20px; opacity: 0.9; }
 
 .footer-social-icons {
@@ -370,7 +351,6 @@ button:hover { background-color: #6d4827; }
     transform: translateY(-3px); 
 }
 
-/* Bottom Bar */
 .footer-bottom {
     max-width: 1100px;
     margin: 0 auto;
@@ -416,11 +396,11 @@ button:hover { background-color: #6d4827; }
         display: flex;
     }
 
-    nav ul li:not(:last-child)::after {
+    #nav ul li:not(:last-child)::after {
         content: none;
     }
 
-    nav {
+    #nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -432,21 +412,21 @@ button:hover { background-color: #6d4827; }
         padding-top: 80px;
     }
 
-    nav.active {
+    #nav.active {
         right: 0;
     }
 
-    nav ul {
+    #nav ul {
         flex-direction: column;
         gap: 0;
         padding: 2rem;
     }
 
-    nav ul li {
+    #nav ul li {
         border-bottom: 1px solid #eee;
     }
 
-    nav ul li a {
+    #nav ul li a {
         display: block;
         padding: 1rem 0;
         font-size: 1.1rem;
@@ -484,14 +464,9 @@ button:hover { background-color: #6d4827; }
         text-align: center;
     }
 
-    /* Override any specific left-alignments on mobile */
-    .footer-links-list li, .footer-col {
-        text-align: center;
-    }
-
-    .footer-social-icons {
-        justify-content: center;
-    }
+    .brand-col { grid-column: span 1; }
+    .footer-social-icons { justify-content: center; }
+    .footer-links-list a:hover { transform: none; }
 }
 
 @media (max-width: 480px) {
