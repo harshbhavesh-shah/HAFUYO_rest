@@ -60,13 +60,11 @@ header a img:hover {
 }
 
 .hamburger {
-    display: none;
     border: none;
     background: none;
     padding: 0;
     cursor: pointer;
-    
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 5px;
 }
