@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ===== MENU HAMBURGER =====
     window.toggleMenu = function () {
         const nav = document.getElementById('nav');
         const btn = document.getElementById('menuBtn');
@@ -58,3 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+const themeToggle = document.getElementById('themeToggle');
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+    });
+}
