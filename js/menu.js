@@ -1,11 +1,21 @@
 function toggleMenu() {
     const nav = document.getElementById('nav');
-    const hamburger = document.querySelector('.hamburger');
+    const btn = document.getElementById('menuBtn');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
     nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
+    btn.classList.toggle('active');
+
+    btn.setAttribute('aria-expanded', !isExpanded);
 }
 
-// close the menu when we click on a link
+document.addEventListener('keydown', (e) => {
+    const nav = document.getElementById('nav');
+    if (e.key === 'Escape' && nav.classList.contains('active')) {
+        toggleMenu();
+    }
+});
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
         document.getElementById('nav').classList.remove('active');
@@ -13,7 +23,6 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// close the menu when we click somewhere else
 document.addEventListener('click', (e) => {
     const nav = document.getElementById('nav');
     const hamburger = document.querySelector('.hamburger');
@@ -23,7 +32,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// back to top
 document.getElementById('backToTop').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
