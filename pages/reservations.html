@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Hafuyo | Restaurant international gastronomique</title>
-    <meta name="description" content="Situé à Aix-en-Provence, ce restaurant international propose une 
-selection des plats les plus emblématiques des gastronomies italienne, mexicaine, chinoise, indienne et 
-française, dans un délicieux mélange ouvert à tous.">
-    <meta name="author" content="L'équipe du Hafuyo Restaurant">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" sizes="any" href="images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="manifest" href="images/site.webmanifest">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
     <style>
-        /* 1. Base Header Style */
-        header {
-            position: fixed; /* Keeps the nav bar at the top while scrolling */
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensures it stays on top of images */
-            background-color: white; /* Default solid background */
-            transition: background-color 0.4s ease, box-shadow 0.3s ease; /* Smooth transition */
-            
-            /* Add some padding for better look */
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 10px 20px;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: #4a3b2a;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a3b2a;
+            font-size: 14px;
+        }
+
+        /* UPDATED: Added date and time to the styling list */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            width: 100%;
             box-sizing: border-box;
         }
 
-        /* 2. The 'Scrolled' Class - This is applied by JS when you scroll down */
-        header.scrolled {
-            /* This is the translucent effect (White with 85% opacity) */
-            background-color: rgba(255, 255, 255, 0.65); 
-            
-            /* This adds a blur filter (Frosted Glass effect) - modern browsers */
-            backdrop-filter: blur(8px); 
-            -webkit-backdrop-filter: blur(8px); 
-
-            /* Optional: Add a subtle shadow when scrolling */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #8b5e34;
         }
 
-        /* Prevent content from hiding behind the fixed header */
-        body {
-            padding-top: 80px; /* Adjust this value to match your header height */
+        textarea {
+            resize: vertical;
+            min-height: 100px;
         }
 
-        /* Ensure logo and nav items align properly with the new flex header */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        button {
+            background-color: #8b5e34;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #6d4827;
         }
     </style>
 </head>
-
 <body>
-    <header id="main-header">
+    <header>
         <div class="logo-container">
             <a href="index.html">
-                <img src="images/logo.webp" alt="Hafuyo logo" height="50">
+                <img src="images/logo.webp" alt="Hafuyo logo">
             </a>
-            <div class="site-title" style="font-weight: bold; font-size: 1.5rem;">Hafuyo</div>
+            <div class="site-title">Hafuyo</div>
         </div>
         
         <div class="hamburger" onclick="toggleMenu()">
@@ -82,321 +107,44 @@ française, dans un délicieux mélange ouvert à tous.">
         </div>
 
         <nav id="nav">
-            <ul style="display: flex; gap: 20px; list-style: none; margin: 0;">
-                <li><a href="pages/reservations.html" style="text-decoration: none; color: black;">Reservations</a></li>
-                <li><a href="pages/menu.html" style="text-decoration: none; color: black;">Menu</a></li>
-                <li><a href="pages/about.html" style="text-decoration: none; color: black;">About Us</a></li>
-                <li><a href="pages/contact.html" style="text-decoration: none; color: black;">Contact Us</a></li>
+            <ul>
+                <li><a href="pages/reservations.html">Reservations</a></li>
+                <li><a href="pages/menu.html">Menu</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="pages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+    <div class="form-container">
+        <h1 class="title">Make a reservation</h1>
 
-    <main>
-        <section class="hero">
-            <h1>HAFUYO</h1>
-            <h2>"Taste and travel the world"</h2>
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" alt="One of our special dishes" style="max-width: 100%; height: auto;">
-            <p>
-                Welcome to Hafuyo, where culinary traditions from around the globe unite on a single plate. 
-                Our passionate chefs craft authentic dishes inspired by Italian, Mexican, Chinese, Indian, 
-                and French cuisines, each prepared with the finest ingredients and a modern twist. 
-                Located in the heart of Aix-en-Provence, we invite you to embark on a gastronomic journey 
-                that celebrates diversity, flavor, and the art of fine dining.
-            </p>
-        </section>
+        <form action="https://formsubmit.co/harshenfrance@gmail.com" method="POST">
 
-        <section class="banner-section">
-            <h2>DISCOVER</h2>
-            <article class="banner">
-                <a href="pages/offer.html">
-                    <div class="banner-image">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200" alt="Limited Offer" style="max-width: 100%; height: auto;">
-                        <div class="banner-text">
-                            <h3>LIMITED OFFER!</h3>
-                        </div>
-                    </div>
-                </a>
-                <p><strong>This winter only, for every new customer visiting us (up to December 31st), get a 20% discount on your meals and drinks</strong></p>
-            </article>
-        </section>
+            <input type="hidden" name="_next" value="https://www.hafuyo.me">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Table Reservation!">
 
-        <section class="grid">
-            <h2>NEW DISHES AND MENU</h2>
-            <a href="pages/new-dishes.html">
-                <article>
-                    <h3>Discover our newly added dishes!</h3>
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="One of our new dishes" style="max-width: 100%; height: auto;">
-                    <p>Freshly crafted Italian, Greek and Turkish dishes for you to enjoy, incorporating traditional flavors with a modern twist</p>
-                </article>
-            </a>
-            <a href="pages/menu.html">
-                <article>
-                    <h3>Take a look at our complete menu</h3>
-                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600" alt="Reference image of our menu" style="max-width: 100%; height: auto;">
-                    <p>Take a look at our full drinks and food menu and get a taste of your order even before you get here</p>
-                </article>
-            </a>
-            <a href="pages/ingredients.html">
-                <article>
-                    <h3>Where our ingredients come from</h3>
-                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600" alt="Fresh local ingredients" style="max-width: 100%; height: auto;">
-                    <p>Discover the source of our delicious and fresh vegetables and meat in this interactive map</p>
-                </article>
-            </a>
-        </section>
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" name="FirstName" required placeholder="Your first name">
 
-        <section class="grid" id="video-section">
-            <h2>Discover one of our iconic recipes</h2>
-            <figure id="video-figure">
-                <video lang="es" controls preload="metadata" width="720"
-                    poster="images/video-poster.webp" aria-describedby="video-desc">
-                    
-                    <source src="images/video_hafuyo_tacos.mp4" type="video/mp4">
-                    
-                    <track kind="captions" srclang="es" src="images/captions_SPA.vtt" label="Español">
-                    <track kind="subtitles" srclang="en" src="images/subtitles_EN.vtt" label="English">
-                    <track kind="subtitles" srclang="fr" src="images/subtitles_FR.vtt" label="Français" default>
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" name="LastName" required placeholder="Your last name">
 
-                    Your browser does not support the video tag.
-                    <p>
-                        Your browser does not support this video html tag. Here you can
-                        <a href="images/video_hafuyo_tacos.mp4" download>download the video (MP4)</a> instead.
-                    </p>
-                </video>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="name@example.com">
 
-                <figcaption id="video-desc">
-                Traditional Mexican tacos al pastor recipe explained step by step. <br>
-                    Subtitles available in English and French.<br>
-                    <span>
-                        Note: this chef is not actually part of our team it is just a 
-                    representation of the kind of food we hypothetically serve.
-                    </span>
-                </figcaption>
-            </figure>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="message">Additional requests</label>
+            <textarea id="message" name="message" required placeholder="Please mention any special requests like allergies or food restrictions..."></textarea>
             
-        </section>
-    </main>
-    
-<footer>
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href="index.html" class="home-link">
-          <img src="images/logo.webp" 
-               alt="" 
-               role="presentation"
-               width="40" 
-               height="40"
-               loading="lazy"
-               decoding="async">
-          <span>Back to home</span>
-        </a>
-        <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="pages/reservations.html">Reservations</a></li>
-          <li><a href="pages/menu.html">Menu</a></li>
-          <li><a href="pages/about.html">About Us</a></li>
-          <li><a href="pages/contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer-contact">
-        <h2>Contact</h2>
-        <address>
-          413, avenue Gaston Berger<br>
-          13625 Aix-en-Provence cedex 1<br>
-          Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
-        </address>
-      </div>
-
-      <div class="footer-social">
-        <h2 class="visually-hidden">Follow Us</h2>
-        <ul class="footer-socials">
-          <li>
-            <a href="https://github.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on GitHub" 
-               data-icon="github"></a>
-          </li>
-          <li>
-            <a href="https://facebook.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on Facebook" 
-               data-icon="facebook"></a>
-          </li>
-          <li>
-            <a href="https://x.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on X" 
-               data-icon="x"></a>
-          </li>
-          <li>
-            <a href="https://instagram.com/hafuyo" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="Hafuyo on Instagram" 
-               data-icon="instagram"></a>
-          </li>
-        </ul>
-      </div>
+            <button type="submit">Send Request</button>
+        </form>
     </div>
 
-    <div class="footer-bottom">
-      <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
-      <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
-        ↑ Back to top
-      </button>
-    </div>
-  </footer>
-
-<style>
-    /* Footer Layout */
-footer {
-  padding: 3rem 1rem 1.5rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-}
-
-/* Brand Section */
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.home-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: fit-content;
-}
-
-.home-link img {
-  display: block;
-}
-
-/* Navigation Lists */
-.footer-nav ul,
-.footer-socials {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.footer-nav h2,
-.footer-contact h2 {
-  margin-bottom: 1rem;
-}
-
-/* Contact Section */
-.footer-contact address {
-  font-style: normal;
-}
-
-/* Social Media */
-.footer-socials {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  min-height: 44px;
-  background-color: #eee; /* Added visible bg for social icons */
-  border-radius: 50%;
-}
-
-/* Bottom Bar */
-.footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.back-to-top {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-socials {
-    justify-content: center;
-  }
-}
-</style>
-
-
-    <script>
-        // 1. Select the header element
-        const header = document.getElementById('main-header');
-
-        // 2. Add an event listener to the window's scroll event
-        window.addEventListener('scroll', () => {
-            
-            // 3. Check if the user has scrolled more than 50 pixels
-            if (window.scrollY > 50) {
-                // If yes, add the 'scrolled' class (transparency)
-                header.classList.add('scrolled');
-            } else {
-                // If back at the top, remove the class (solid white)
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Back to top functionality
-        const backToTopBtn = document.getElementById('backToTop');
-        if(backToTopBtn) {
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    </script>
-    
-    <script src="js/menu.js"></script>
 </body>
 </html>
