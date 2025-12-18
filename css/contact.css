@@ -288,9 +288,11 @@ button:hover { background-color: #6d4827; }
 }
 
 .back-to-top {
+    
     background: transparent;
-    border: 1px solid #bcaaa4;
-    color: #8b5e34;
+    background-color: #8b5e34;
+    border: 1px solid black;
+    color: #ffffff;
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 20px;
@@ -301,10 +303,10 @@ button:hover { background-color: #6d4827; }
 }
 .back-to-top:hover {
     background-color: #8b5e34;
+    transform: translateY(-3px);
     color: #ffffff;
     border-color: #8b5e34;
 }
-
 /* ========================================= */
 /* === RESPONSIVE MEDIA QUERIES (FIXED) === */
 /* ========================================= */
