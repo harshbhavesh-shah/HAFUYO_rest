@@ -1,6 +1,4 @@
-/* ========================================= */
-/* === GLOBAL & LAYOUT === */
-/* ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +14,7 @@ body {
     min-height: 100vh;
 }
 
-/* ========================================= */
-/* === HEADER STYLES === */
-/* ========================================= */
+/* Header*/
 header {
     position: fixed;
     top: 0;
@@ -101,8 +97,7 @@ header a img:focus {
     transform: translateY(-8px) rotate(-45deg) !important;
 }
 
-/* === NAVIGATION (FIXED: Targeted to #nav only) === */
-/* This prevents header styles from messing up the footer links */
+/*Navigator*/
 #nav ul {
     display: flex;
     list-style: none;
@@ -129,9 +124,7 @@ header a img:focus {
     font-size: 1.5rem;
 }
 
-/* ========================================= */
-/* === MAIN & FORM (Reservation Specific) === */
-/* ========================================= */
+
 main {
     max-width: 1400px;
     margin: 0 auto;
@@ -234,7 +227,6 @@ button:hover { background-color: #6d4827; }
     margin-bottom: 50px;
 }
 
-/* FIX: Semantic resets for layout consistency */
 .brand-col, address.footer-col, nav.footer-col {
     display: block;
     font-style: normal; 
@@ -329,7 +321,6 @@ button:hover { background-color: #6d4827; }
     transition: all 0.3s ease;
 }
 
-/* FIX: Restrict size of images inside social icons */
 .footer-social-icons img {
     width: 20px;
     height: auto;
@@ -375,9 +366,6 @@ button:hover { background-color: #6d4827; }
     border-color: #8b5e34;
 }
 
-/* ========================================= */
-/* === RESPONSIVE MEDIA QUERIES === */
-/* ========================================= */
 @media (max-width: 768px) {
     body {
         padding-top: 80px;
@@ -454,8 +442,8 @@ button:hover { background-color: #6d4827; }
         flex-direction: column;
         text-align: center;
     }
-
-    /* Override alignments for mobile */
+/* For mobile*/
+    /
     .footer-links-list li, .footer-col {
         text-align: center;
     }
