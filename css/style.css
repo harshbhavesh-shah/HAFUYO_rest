@@ -9,6 +9,16 @@ body {
     padding-top: 90px;
 }
 
+body.dark-theme {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #000;
+}
+
+body.dark-theme img,
+body.dark-theme video {
+    filter: invert(1) hue-rotate(180deg);
+}
+
 /* ========== HEADER ========== */
 header {
     position: fixed;
