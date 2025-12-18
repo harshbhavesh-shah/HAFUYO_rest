@@ -361,52 +361,60 @@ section > h2 {
     box-shadow: 15px 15px 0px rgba(200, 175, 143, 0.5);
 }
 
-.chefs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
+.chefs-section {
+    margin: 4rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
+    text-align: center;
 }
 
+.chefs-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+/* GRID ALIGNÉ */
+.chefs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+/* CARTE CHEF */
 .chef-card {
-    background: white;
+    background-color: rgba(200, 175, 143, 0.8);
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
+    padding: 1.5rem;
+    border: 3px solid #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .chef-card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.chef-img-wrapper {
-    height: 300px;
-    overflow: hidden;
-}
-
-.chef-img-wrapper img {
+.chef-card img {
     width: 100%;
-    height: 100%;
+    height: 280px;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    border-radius: 15px;
+    margin-bottom: 1rem;
 }
 
-.chef-card:hover .chef-img-wrapper img {
-    transform: scale(1.1);
-}
-
-.chef-details {
-    padding: 1.5rem;
-}
-
-.specialty {
-    display: block;
-    color: #b00;
-    font-weight: bold;
+.chef-card h3 {
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+}
+
+.chef-card p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: auto;
 }
 
 /* ========== FOOTER ========== */
