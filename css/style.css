@@ -60,6 +60,7 @@ header a img:hover {
 }
 
 .hamburger {
+    display: none;
     border: none;
     background: none;
     padding: 0;
