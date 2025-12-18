@@ -73,8 +73,12 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px; /* Fixed width syntax */
+            
+            /* Responsive Width Settings */
+            width: 100%;        /* Takes up full width on mobile */
+            max-width: 600px;   /* Stops growing at 600px on desktop */
+            margin: 0 auto;     /* Centers it */
+            box-sizing: border-box; /* Ensures padding doesn't break width */
         }
 
         .title {
@@ -159,23 +163,22 @@
             background-color: #6d4827;
         }
 
-        /* --- UPDATED FOOTER STYLES (Compact & Clean) --- */
+        /* --- FOOTER STYLES --- */
         footer {
             background-color: white;
-            /* Added top border for separation */
             border-top: 1px solid #e0dbd0; 
-            padding: 2.5rem 1.5rem 1.5rem; /* Reduced padding */
+            padding: 2.5rem 1.5rem 1.5rem;
             margin-top: auto;
             color: #444;
-            font-size: 0.9rem; /* Slightly smaller text */
+            font-size: 0.9rem;
         }
 
         .footer-container {
-            max-width: 1100px; /* Slightly tighter width */
+            max-width: 1100px;
             margin: 0 auto 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem; /* Reduced gap */
+            gap: 2rem;
         }
 
         .footer-brand {
@@ -190,12 +193,12 @@
             gap: 0.5rem;
             width: fit-content;
             text-decoration: none;
-            color: #4a3b2a; /* Brand brown */
+            color: #4a3b2a;
         }
 
         .footer-nav ul,
         .footer-socials {
-            list-style: none;
+            list-style: none; /* No bullets */
             margin: 0;
             padding: 0;
         }
@@ -203,21 +206,23 @@
         .footer-nav ul {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem; /* Tighter list */
+            gap: 0.4rem; /* Tight spacing */
         }
         
+        /* Updated Quick Links Typography */
         .footer-nav a {
-            text-decoration: none;
-            color: #555;
+            text-decoration: none; /* No underlines */
+            color: #666;
+            font-size: 0.85rem; /* Smaller font */
             transition: color 0.2s;
+            display: block; /* Helps hit area */
         }
 
         .footer-nav a:hover {
-            color: #8b5e34; /* Brand accent */
+            color: #8b5e34;
             padding-left: 3px;
         }
 
-        /* Compact Headers */
         .footer-nav h2,
         .footer-contact h2,
         .footer-social h2 {
@@ -226,7 +231,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #4a3b2a; /* Brand brown */
+            color: #4a3b2a;
         }
 
         .footer-contact address {
@@ -244,9 +249,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px; /* Smaller icons */
+            width: 36px;
             height: 36px;
-            background: #f4f1ea; /* Light beige bg */
+            background: #f4f1ea;
             border-radius: 50%;
             color: #4a3b2a;
             text-decoration: none;
@@ -292,7 +297,6 @@
             color: #4a3b2a;
         }
 
-        /* Responsive Footer */
         @media (max-width: 768px) {
             .footer-container {
                 grid-template-columns: 1fr;
