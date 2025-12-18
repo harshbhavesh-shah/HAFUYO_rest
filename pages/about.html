@@ -107,9 +107,10 @@
     
     <footer>
         <div class="footer-container">
+          <!-- Brand & Home Link -->
           <div class="footer-brand">
-            <a href="../index.html" class="home-link">
-              <img src="../images/logo.webp" 
+            <a href="index.html" class="home-link" target="_blank" rel="noopener noreferrer">
+              <img src="images/logo.webp" 
                    alt=""
                    width="40" 
                    height="40"
@@ -119,17 +120,19 @@
             </a>
             <p class="footer-description">A culinary journey celebrating global flavors in the heart of Aix-en-Provence.</p>
           </div>
-
+    
+          <!-- Quick Links -->
           <nav class="footer-nav" aria-label="Footer navigation">
             <h2>Quick Links</h2>
             <ul>
-              <li><a href="reservations.html">Reservations</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="pages/reservations.html" target="_blank" rel="noopener noreferrer">Reservations</a></li>
+              <li><a href="pages/menu.html" target="_blank" rel="noopener noreferrer">Menu</a></li>
+              <li><a href="pages/about.html" target="_blank" rel="noopener noreferrer">About Us</a></li>
+              <li><a href="pages/contact.html" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
             </ul>
           </nav>
-
+    
+          <!-- Contact Information -->
           <div class="footer-contact">
             <h2>Contact</h2>
             <address>
@@ -138,7 +141,8 @@
               Tel: <a href="tel:+33413946300">04 13 94 63 00</a>
             </address>
           </div>
-
+    
+          <!-- Social Media -->
           <div class="footer-social">
             <h2 class="visually-hidden">Follow Us</h2>
             <ul class="footer-socials">
@@ -173,7 +177,8 @@
             </ul>
           </div>
         </div>
-
+    
+        <!-- Bottom Bar -->
         <div class="footer-bottom">
           <p class="copyright">&copy; 2025 Hafuyo. All rights reserved.</p>
           <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
@@ -181,11 +186,11 @@
           </button>
         </div>
       </footer>
-
-    <script src="../js/menu.js"></script>
-    <script>
+    
+        <script src="js/menu.js"></script>
+        <script>
         const header = document.querySelector('header');
-
+    
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
