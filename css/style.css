@@ -510,6 +510,11 @@ footer img {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Forces it to appear on small screens */
+    }
+}
     body {
         padding-top: 80px;
     }
