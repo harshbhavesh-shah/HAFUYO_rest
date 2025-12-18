@@ -331,8 +331,6 @@ section > h2 {
 }
 
 /* ========== ABOUT PAGE SPECIFIC ========== */
-
-/* Hero About */
 .about-hero {
     height: 400px;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
@@ -348,7 +346,6 @@ section > h2 {
 .about-hero h1 { color: white; }
 .hero-subtitle { color: #f0f0f0; font-size: 1.5rem; }
 
-/* Flex Sections (Histoire) */
 .flex-container {
     display: flex;
     gap: 4rem;
@@ -364,35 +361,6 @@ section > h2 {
     box-shadow: 15px 15px 0px rgba(200, 175, 143, 0.5);
 }
 
-/* Grille des Valeurs */
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.value-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-10px);
-    border-color: #c8af8f;
-}
-
-.value-card .icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-/* Grille des Chefs */
 .chefs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -442,38 +410,33 @@ section > h2 {
 }
 
 /* ========== FOOTER ========== */
-/* ========== NEW FOOTER CSS ========== */
 .hafuyo-footer {
-    background-color: #f8f5f0; /* Light beige background */
-    color: #4a3b2a; /* Dark brown text */
+    background-color: #f8f5f0; 
+    color: #4a3b2a; 
     padding: 60px 20px 20px;
     font-size: 0.9rem;
     line-height: 1.6;
-    margin-top: auto; /* Ensures it stays at the bottom */
+    margin-top: auto; 
 }
 
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    /* 4 columns on large screens, mimicking the reference image pattern */
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 50px;
 }
-
-/* --- Column 1: Brand --- */
-/* --- Column 1: Brand --- */
 .brand-col {
     display: flex;
-    flex-direction: column; /* Stacks logo and text vertically */
-    align-items: center;    /* Centers them horizontally */
-    text-align: center;     /* Centers the text inside the description */
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;   
 }
 
 .brand-col .footer-logo {
     display: flex;
-    justify-content: center; /* Ensures content inside the link is centered */
+    justify-content: center; 
     align-items: center;
     text-decoration: none;
     color: #2c241b;
@@ -485,15 +448,12 @@ section > h2 {
     width: auto; 
 }
 
-/* Removed the span styling since the brand name text is deleted */
-
 .footer-desc { 
     opacity: 0.9; 
     max-width: 280px; 
-    /* Ensures the paragraph text is centered */
     margin: 0 auto; 
 }
-/* --- Headings --- */
+
 .footer-heading {
     color: #2c241b;
     font-size: 1.05rem;
@@ -503,7 +463,6 @@ section > h2 {
     letter-spacing: 0.5px;
 }
 
-/* --- Lists & Links --- */
 .footer-links-list { list-style: none; padding: 0; margin: 0; }
 .footer-links-list li { margin-bottom: 12px; }
 .footer-links-list a,
@@ -515,15 +474,13 @@ section > h2 {
 }
 .footer-links-list a:hover,
 .footer-phone:hover {
-    color: #8b5e34; /* Brand accent color on hover */
-    transform: translateX(5px); /* Subtle movement on hover */
+    color: #8b5e34; 
+    transform: translateX(5px); 
 }
 
-/* --- Contact --- */
 .footer-address { font-style: normal; }
 .footer-phone { display: block; margin-top: 15px; font-weight: 700; }
 
-/* --- Social Icons --- */
 .social-text { margin-bottom: 20px; opacity: 0.9; }
 .footer-social-icons {
     display: flex;
@@ -532,14 +489,14 @@ section > h2 {
     padding: 0;
     margin: 0;
 }
-/* Style text links to look like circular icons */
+
 .footer-social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 38px;
     height: 38px;
-    background-color: #ffffff; /* White circle */
+    background-color: #ffffff; 
     color: #8b5e34;
     border-radius: 50%;
     text-decoration: none;
@@ -552,15 +509,14 @@ section > h2 {
     background-color: #8b5e34;
     color: #ffffff;
     border-color: #8b5e34;
-    transform: translateY(-3px); /* Move up on hover */
+    transform: translateY(-3px); 
 }
 
-/* --- Bottom Bar --- */
 .footer-bottom {
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 25px;
-    border-top: 1px solid #e0dbd0; /* Subtle separator line */
+    border-top: 1px solid #e0dbd0; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -596,7 +552,6 @@ section > h2 {
         padding-top: 80px;
     }
 
-    /* Header responsive */
     .hamburger {
         display: flex;
     }
@@ -645,7 +600,6 @@ section > h2 {
         font-size: 1.2rem;
     }
 
-    /* Main content */
     main {
         padding: 1.5rem;
     }
@@ -678,7 +632,6 @@ section > h2 {
         font-size: 1.5rem;
     }
 
-    /* Footer */
     footer {
         flex-direction: column;
         align-items: center;
@@ -797,7 +750,7 @@ section > h2 {
 }
 @media (max-width: 900px) {
     .footer-container {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        grid-template-columns: 1fr 1fr; 
         gap: 40px 30px;
     }
     .brand-col { grid-column: span 2; text-align: center; }
@@ -807,13 +760,13 @@ section > h2 {
 
 @media (max-width: 600px) {
     .footer-container {
-        grid-template-columns: 1fr; /* 1 column on phones */
+        grid-template-columns: 1fr; 
         text-align: center;
         gap: 30px;
     }
     .brand-col { grid-column: span 1; }
     .footer-social-icons { justify-content: center; }
-    .footer-links-list a:hover { transform: none; } /* Disable hover move on touch */
+    .footer-links-list a:hover { transform: none; }
     .footer-bottom {
         flex-direction: column;
         gap: 15px;
