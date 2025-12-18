@@ -44,8 +44,32 @@
             </ul>
         </nav>
     </header> 
+    
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid rgba(88, 80, 69, 0.8);
+            background-color: rgba(200, 175, 143, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.5s ease;
+}
 
-    <main>
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px); 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+    <style>
+        <main>
         
         <section class="hero">
             
@@ -501,28 +525,7 @@ footer {
     justify-content: center;
   }
 }
-    header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 2px solid rgba(88, 80, 69, 0.8);
-    background-color: rgba(200, 175, 143, 0.3);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: all 0.5s ease;
-}
 
-header.scrolled {
-    background-color: rgba(255, 255, 255, 0.65); 
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
 </style>
     
   <script>
