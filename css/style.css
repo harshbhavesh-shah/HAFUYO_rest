@@ -61,13 +61,14 @@ header a img:focus {
 }
 
 .hamburger {
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
     display: none;
     flex-direction: column;
     gap: 5px;
+    z-index: 1100; 
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
 }
 
 .hamburger span {
@@ -75,19 +76,20 @@ header a img:focus {
     width: 25px;
     height: 3px;
     background-color: #333;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.hamburger.active span:nth-of-type(1) {
+    transform: translateY(8px) rotate(45deg) !important;
 }
 
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
+.hamburger.active span:nth-of-type(2) {
+    opacity: 0 !important;
+    transform: translateX(-10px);
 }
 
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+.hamburger.active span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(-45deg) !important;
 }
 
 nav ul {
