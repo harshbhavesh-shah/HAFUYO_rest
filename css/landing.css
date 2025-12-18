@@ -1,6 +1,3 @@
-/* ========================================= */
-/* === GLOBAL & LAYOUT (Matches style(1).css) === */
-/* ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Matches style(1).css */
+    font-family: Arial, sans-serif;
     padding-top: 90px;
     background-color: white;
     display: flex;
@@ -16,9 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* ========================================= */
-/* === HEADER STYLES (Matches style(1).css) === */
-/* ========================================= */
+/*header*/
 header {
     position: fixed;
     top: 0;
@@ -49,7 +44,7 @@ header.scrolled {
 }
 
 header a img {
-    height: 60px; /* Matches style(1).css */
+    height: 60px;
     width: auto;
     outline: 1px solid transparent;
     outline-offset: 10px;
@@ -69,7 +64,7 @@ header a img:focus {
     color: #333;
 }
 
-/* HAMBURGER MENU */
+/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -102,7 +97,7 @@ header a img:focus {
     transform: translateY(-8px) rotate(-45deg) !important;
 }
 
-/* NAVIGATION (Targeted to #nav only) */
+/* Navigation*/
 #nav ul {
     display: flex;
     list-style: none;
@@ -113,15 +108,15 @@ header a img:focus {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 1.5rem; /* Matches style(1).css */
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 #nav ul li a:hover {
-    color: red; /* Matches style(1).css */
+    color: red;
 }
 
-/* Pipe Separator */
+/* Separator */
 #nav ul li:not(:last-child)::after {
     content: "|";
     color: #999;
@@ -130,14 +125,12 @@ header a img:focus {
     font-size: 1.5rem;
 }
 
-/* ========================================= */
-/* === MAIN & SUCCESS CARD CONTENT === */
-/* ========================================= */
+
 main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
-    flex: 1; /* Pushes footer to bottom */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,9 +200,6 @@ main {
     transform: translateY(-3px);
 }
 
-/* ========================================= */
-/* === FOOTER STYLES (Matches style(1).css) === */
-/* ========================================= */
 .hafuyo-footer {
     background-color: #f8f5f0; 
     color: #4a3b2a; 
@@ -223,13 +213,11 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    /* 2fr Brand, 1fr Links, 1fr Contact, 1.5fr Social */
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 40px;
     margin-bottom: 50px;
 }
 
-/* Semantic Resets */
 .brand-col, address.footer-col, nav.footer-col {
     display: block;
     font-style: normal; 
@@ -325,7 +313,6 @@ main {
     transition: all 0.3s ease;
 }
 
-/* Image Restriction for Icons */
 .footer-social-icons img {
     width: 20px;
     height: auto;
@@ -371,15 +358,13 @@ main {
     border-color: #8b5e34;
 }
 
-/* ========================================= */
-/* === RESPONSIVE MEDIA QUERIES === */
-/* ========================================= */
+
 @media (max-width: 768px) {
     body {
         padding-top: 80px;
     }
 
-    /* Header Mobile */
+    /* Mobile header*/
     .hamburger {
         display: flex;
     }
@@ -460,7 +445,7 @@ main {
     .footer-social-icons { justify-content: center; }
     .footer-links-list a:hover { transform: none; }
     
-    /* Center align list items on mobile */
+    /* Center align list items for mobile */
     .footer-links-list li, .footer-col {
         text-align: center;
     }
