@@ -1,57 +1,59 @@
-//THIS CODE WAS ON menu.js FILE
+// Hamburger Menu Toggle
 function toggleMenu() {
     const nav = document.getElementById('nav');
     const btn = document.getElementById('menuBtn');
+    
+    if (!nav || !btn) return; // Safety check
+    
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-
     nav.classList.toggle('active');
     btn.classList.toggle('active');
-
     btn.setAttribute('aria-expanded', !isExpanded);
 }
 
+// Close menu on Escape key
 document.addEventListener('keydown', (e) => {
     const nav = document.getElementById('nav');
-    if (e.key === 'Escape' && nav.classList.contains('active')) {
+    if (e.key === 'Escape' && nav?.classList.contains('active')) {
         toggleMenu();
     }
 });
 
+// Close menu when clicking nav links
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
-        document.getElementById('nav').classList.remove('active');
-        document.querySelector('.hamburger').classList.remove('active');
+        const nav = document.getElementById('nav');
+        const hamburger = document.querySelector('.hamburger');
+        nav?.classList.remove('active');
+        hamburger?.classList.remove('active');
     });
 });
 
+// Close menu when clicking outside
 document.addEventListener('click', (e) => {
     const nav = document.getElementById('nav');
     const hamburger = document.querySelector('.hamburger');
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+    
+    if (nav && hamburger && 
+        !nav.contains(e.target) && 
+        !hamburger.contains(e.target)) {
         nav.classList.remove('active');
         hamburger.classList.remove('active');
     }
 });
 
-document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-//menu.js code end
-
-
-
-//THIS IS THE CODE ORIGINALLY ON contact.js
+// Sticky header on scroll
 const header = document.querySelector('header');
-if(header) {
+if (header) {
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
 }
-//contact.js code end
+
+// Back to top button (single instance)
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
