@@ -8,7 +8,6 @@ if(header) {
             header.classList.remove('scrolled');
         }
     });
-}
 
 function toggleMenu() {
     const hamburger = document.querySelector('.hamburger');
